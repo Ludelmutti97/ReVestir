@@ -1,43 +1,36 @@
 
-{
-  "produtos": [
+[
     {
-      "_id": "ObjectId1",
       "nome": "Produto 1",
       "cor": "Verde",
       "material": "Algodão Ecológico",
       "sexo": "Unissex"
     },
     {
-      "_id": "ObjectId2",
       "nome": "Produto 2",
       "cor": "Azul",
       "material": "Fibra de Bambu",
       "sexo": "Masculino"
     },
     {
-      "_id": "ObjectId3",
       "nome": "Produto 3",
       "cor": "Vermelho",
       "material": "PET Reciclado",
       "sexo": "Feminino"
     },
     {
-      "_id": "ObjectId4",
       "nome": "Produto 4",
       "cor": "Amarelo",
       "material": "Algodão Ecológico",
       "sexo": "Unissex"
     },
     {
-      "_id": "ObjectId5",
       "nome": "Produto 5",
       "cor": "Roxo",
       "material": "Fibra de Bambu",
       "sexo": "Feminino"
     },
     {
-      "_id": "ObjectId6",
       "nome": "Produto 6",
       "cor": "Preto",
       "material": "PET Reciclado",
@@ -51,95 +44,83 @@
       "sexo": "Unissex"
     },
     {
-      "_id": "ObjectId8",
       "nome": "Produto 8",
       "cor": "Laranja",
       "material": "Fibra de Bambu",
       "sexo": "Feminino"
     },
     {
-      "_id": "ObjectId9",
       "nome": "Produto 9",
       "cor": "Cinza",
       "material": "PET Reciclado",
       "sexo": "Masculino"
     },
     {
-      "_id": "ObjectId10",
       "nome": "Produto 10",
       "cor": "Verde",
       "material": "Algodão Ecológico",
       "sexo": "Unissex"
     },
     {
-      "_id": "ObjectId11",
       "nome": "Produto 11",
       "cor": "Azul",
       "material": "Fibra de Bambu",
       "sexo": "Masculino"
     },
     {
-      "_id": "ObjectId12",
       "nome": "Produto 12",
       "cor": "Vermelho",
       "material": "PET Reciclado",
       "sexo": "Feminino"
     },
     {
-      "_id": "ObjectId13",
       "nome": "Produto 13",
       "cor": "Amarelo",
       "material": "Algodão Ecológico",
       "sexo": "Unissex"
     },
     {
-      "_id": "ObjectId14",
       "nome": "Produto 14",
       "cor": "Roxo",
       "material": "Fibra de Bambu",
       "sexo": "Feminino"
     },
     {
-      "_id": "ObjectId15",
       "nome": "Produto 15",
       "cor": "Preto",
       "material": "PET Reciclado",
       "sexo": "Masculino"
     },
     {
-      "_id": "ObjectId16",
       "nome": "Produto 16",
       "cor": "Branco",
       "material": "Algodão Ecológico",
       "sexo": "Unissex"
     },
     {
-      "_id": "ObjectId17",
       "nome": "Produto 17",
       "cor": "Laranja",
       "material": "Fibra de Bambu",
       "sexo": "Feminino"
     },
     {
-      "_id": "ObjectId18",
       "nome": "Produto 18",
       "cor": "Cinza",
       "material": "PET Reciclado",
       "sexo": "Masculino"
     },
     {
-      "_id": "ObjectId19",
       "nome": "Produto 19",
       "cor": "Verde",
       "material": "Algodão Ecológico",
       "sexo": "Unissex"
     },
     {
-      "_id": "ObjectId20",
       "nome": "Produto 20",
       "cor": "Azul",
       "material": "Fibra de Bambu",
-      "sexo": "Masculino"
+      "sexo": "Masculino",
+      "favorite": false
+      
     }
   ]
-}

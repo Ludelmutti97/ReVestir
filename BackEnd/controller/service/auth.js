@@ -1,5 +1,5 @@
-const { findProdutos } = require("../utils/auth");
-const { getProduto } = require("../utils/auth");
+const { findProdutos, findfavoriteById, findFavoriteAll } = require("../utils/auth");
+const { findProductById } = require("../utils/auth");
 
 async function getProduto() {
   const pedido = await findProdutos();
@@ -7,9 +7,18 @@ async function getProduto() {
 }
 
 async function getProdutoId(id) {
-    const pedido = await getProduto.findById(id);
-    return pedido;
-  }
+  const pedido = await findProductById(id);
+  return pedido;
+}
+async function getProdutoById(id) {
+  const pedido = await findfavoriteById(id);
+  return pedido;
+}
+async function getFavorite() {
+  const pedido = await findFavoriteAll();
+  return pedido;
+}
 
-module.exports = { getProduto };
-module.exports = {  getProdutoId };
+
+
+module.exports = { getProduto, getProdutoId , getProdutoById,  getFavorite};
