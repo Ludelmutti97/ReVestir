@@ -1,6 +1,8 @@
 const express = require("express");
-const { getProduto, getProdutoById, getFavorite } = require("../controller/service/auth");
-const { getProdutoId } = require("../controller/service/auth.js");
+const { getProduto, getProdutoById, getProdutoId, getFavorite, getTopRatedProducts, getsearchProducts, getFilterProductsByCategory, getAddProductReview, getCreateCategory} = require("../controller/service/auth");
+const { findReview, addReview } = require("../controller/service/auth.js");
+
+
 
 
 const PORT = 3030; //PORT DEIFINIDA COMO 3030
@@ -18,7 +20,7 @@ app.get("/api/products", async (req, res) => {
     if (product) {
       return res.json(product);
     } else {
-      return res.status(404).json({ message: "not_found" });
+      return res.status(404).json({ message: "Product not found" });
     }
   } catch (err) {
     console.log(err);
@@ -35,10 +37,30 @@ app.get("/api/products/:id", async (req, res) => {
     if (product) {
       return res.json(product);
     } else {
-      return res.status(404).json({ message: "not_found" });
+      return res.status(404).json({ message: "Product not found" });
     }
   } catch (error) {
     console.error(error);
+  }
+});
+
+
+
+
+// @desc    Todos os Favorite
+// @route   GET /api/all/favorite/
+
+app.get("/api/favorite/", async (req, res) => {
+  ; try {
+    const product = await getFavorite();
+    // Check if product exists
+    if (product) {
+      return res.json(product);
+    } else {
+      return res.status(404).json({ message: "not_found" });
+    }
+  } catch (err) {
+    console.log(err);
   }
 });
 
@@ -47,84 +69,22 @@ app.get("/api/products/:id", async (req, res) => {
 
 app.post("/api/favorite/:id", async (req, res) => {
 
-    const id = req.params.id;
-    try {
-      const produtoFavorito = await getProdutoById(
-        id 
-      );
-      if (produtoFavorito) {
-       return res.json({ message: "Produto adicionado aos favoritos" })
-      } else {
-        return res.status(404).json({ message: "not_found" });
-      }
-     
-    } catch (err) {
-      console.log(err);
-    }
-  })
-
-
-  // @desc    Todos os Favorite
-// @route   GET /api/all/favorite/
-
-app.get("/api/favorite/", async (req, res) => {
-;  try {
-  const product = await getFavorite();
-  // Check if product exists
-  if (product) {
-    return res.json(product);
-  } else {
-    return res.status(404).json({ message: "not_found" });
-  }
-} catch (err) {
-  console.log(err);
-}
-});
-
-
-// @desc    Create new review
-// @route   POST /api/products/:id/reviews
-// FAZEER  AQUI
-app.post("/api/products/:id/reviews", async (req, res) => {
   try {
-    const { rating, comment } = req.body;
-    const productId = req.params.id;
-    const userId = req.user._id;
-
-    const product = await getProdutoById(productId);
-    if (product) {
-      const review = {
-        name: req.user.name,
-        rating: Number(rating),
-        comment,
-        user: userId,
-      };
-
-      const updatedProduct = await addProductReview(productId, review);
-
-      return res.status(201).json({ message: "Review added", product: updatedProduct });
+    const id = req.params.id;
+    const produtoFavorito = await getProdutoById(
+      id
+    );
+    if (produtoFavorito) {
+      return res.json({ message: "Produto adicionado aos favoritos" })
     } else {
       return res.status(404).json({ message: "Product not found" });
     }
-  } catch (err) {
-    console.log(err);
-    
-  }
-});
-// @desc    Get top rated products
-// @route   GET /api/products/rating/top
 
-app.get("/api/products/rating/top", async (req, res) => {
-  // Find products and sort by rating in ascending order
-  try {
-    const products = await produtos.find({}).sort({ rating: -1 }).limit(3);
-
-    return res.json(products);
   } catch (err) {
     console.log(err);
   }
-});
-
+})
+// **** Ver com o Rafael como fazer!!***
 // @desc    Add Outfit
 // @route   POST /api/user/favorite/look
 
@@ -135,47 +95,91 @@ app.post("/api/user/favorite/look", async (req, res) => {
   }
 });
 
+// **** Conferir c Rafael***
+// @desc    Create new review
+// @route   POST /api/products/:id/reviews
 
-
-// @desc    get product through filters
-// @route   GET /api/products/filters
-
-app.get("/api/products/filters", async (req, res) => {
-  try {
-  } catch (err) {
-    console.log(err);
+app.post("/api/products/:id/reviews", async (req, res) => {
+ 
+    const productId = req.params.id;
+    const { name, rating, comment } = req.body;
+ try {
+  await productService.getAddProductReview(productId, { name, rating, comment });
+      return res.status(201).json({ message: "Review added", product: updatedProduct });
+    
   }
-});
-
-// @desc    search box
-// @route   GET /api/products/palavra
-
-app.get("/api/products/palavra", async (req, res) => {
-  try {
-  } catch (err) {
-    console.log(err);
-  }
-});
-
-// @desc    User
-// @route   post /api/auth/login
-app.post("/api/auth/login", async (req, res) => {
-  try {
-    const user = await getUserByEmail(req.body.email ?? "");
-    const isCorrect = await checkUserPassword(
-      req.body.email ?? "",
-      req.body.password ?? ""
-    );
-    if (isCorrect) {
-      //create session
-      const token = await addAuthSession(user._id);
-      return res.status(200).json({ token });
+   catch (err) {
+    return res.status(404).json({ message: "Product not found" });
     }
 
-    return res.sendStatus(403);
+  
+});
+
+
+// **** Conferir c Rafael***
+// @desc    Get top rated products
+// @route   GET /api/products/top-rated
+
+app.get("/api/products/top-rated", async (req, res) => {
+
+  try {
+    const product = await getTopRatedProducts()
+    return res.json(product);
   } catch (err) {
-    console.log(err);
+    return res.status(404).json({ message: "not-found" });
   }
 });
+
+// **** Conferir c Rafael***
+// @desc    POST Category
+// @route   POST /api/categories
+
+app.post("/api/categories", async (req, res) => {
+  const { name, color, gender, material, type, description } = req.body;
+
+  try {
+    const category = await getCreateCategory(name, color, gender, material, type, description);
+    return res.status(201).json(category);
+  } catch (err) {
+    console.log(err)
+  }
+})
+
+
+
+// **** Conferir c Rafael***
+// @desc    get product through filters category
+// @route   GET /api/products/filter
+
+app.get("/api/products/filter:category", async (req, res) => {
+    const category = req.params.category;
+  try {
+    const products = await getFilterProductsByCategory(category);
+    return res.json(products)
+  } catch (err) {
+    return res.status(500).json({ message: "Internal Server Error" })
+
+  }
+})
+
+// **** Conferir c Rafael***
+// @desc    search box
+// @route   GET /api/products/search
+// termo é uma variavel que contem o valor a ser pesquisado.
+app.get("/api/products/search", async (req, res) => {
+  const termo = req.query.q;
+  try {
+
+    const produtos = await getsearchProducts(termo)
+    if (produtos.length > 0) {
+      return res.status(404).json({ message: "SearchBox not found" });
+    }
+    
+  } catch (err) {
+    console.log(err);
+
+  }
+})
+
 
 app.listen(PORT, () => console.log(`Listening on http://localhost:${PORT}`));
