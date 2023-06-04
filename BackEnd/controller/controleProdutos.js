@@ -24,6 +24,7 @@ app.get("/api/products", async (req, res) => {
     }
   } catch (err) {
     console.log(err);
+    
   }
 });
 
@@ -118,9 +119,9 @@ app.post("/api/products/:id/reviews", async (req, res) => {
 
 // **** Conferir c Rafael***
 // @desc    Get top rated products
-// @route   GET /api/products/top-rated
+// @route   GET /api/products/top
 
-app.get("/api/products/top-rated", async (req, res) => {
+app.get("/api/products/top", async (req, res) => {
 
   try {
     const product = await getTopRatedProducts()
@@ -128,7 +129,7 @@ app.get("/api/products/top-rated", async (req, res) => {
   } catch (err) {
     return res.status(404).json({ message: "not-found" });
   }
-});
+})
 
 // **** Conferir c Rafael***
 // @desc    POST Category
@@ -151,7 +152,7 @@ app.post("/api/categories", async (req, res) => {
 // @desc    get product through filters category
 // @route   GET /api/products/filter
 
-app.get("/api/products/filter:category", async (req, res) => {
+app.get("/api/products/filter-category", async (req, res) => {
     const category = req.params.category;
   try {
     const products = await getFilterProductsByCategory(category);
