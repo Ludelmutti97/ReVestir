@@ -1,0 +1,71 @@
+*{
+  background-color:rgb(225, 206, 129);
+}
+
+
+.div1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  /* Adicionado para centralizar verticalmente */
+}
+
+.footer {
+ 
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 20vh;
+  /* Adicionado para posicionar no fundo da página */
+}
+
+
+.footer img {
+  margin: 2% 10px;
+  /* Ajuste os valores de margem conforme necessário */
+
+}
+
+.scrolldown {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 20vh;
+  /* Adicionado para posicionar no fundo da página */
+  animation: bounce 1s infinite;
+  ;
+}
+
+.usericon {
+  float: right;
+  border: 5px;
+  margin: 50px;
+  padding: 5px;
+  ;
+}
+
+.prods{
+  float: right;
+  border: 5px;
+  margin: 5px;
+  padding: 60px;
+  font-weight: 500;
+  color: aliceblue;
+}
+
+
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}

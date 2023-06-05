@@ -1,25 +1,17 @@
+import React from "react";
 import "./App.css";
-import "./componentes/barradePesquisa/barraDePesquisa.css";
-import BarraDePesquisa from "./componentes/barradePesquisa/barraDePesquisa";
+import HomePage from "./componentes/HomePage/HomePage";
+import Carousel from "./componentes/carrosel/Carousel";
 
 function App() {
   return (
     <div className="App">
-      <header >
-        <img src={require("./Logo.png")} className="logo" />  
-        <BarraDePesquisa />
-        <h3 > Produtos</h3>
-        <span >👧🏽</span>
-      
-      </header>
-
-
- <br>
- </br>
-
-      <footer className="footer">
-        <div> Redes Sociais</div>
-        </footer>
+     <HomePage/>
+     <div>
+      <Carousel/>
+        
+     </div>
+     
     </div>
   );
 }
