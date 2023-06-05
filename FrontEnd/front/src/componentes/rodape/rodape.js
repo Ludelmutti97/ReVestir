@@ -10,11 +10,11 @@ function Footer() {
     return (
 
         <div className="footer">
-            <div     className='Revestirfooter'><h1>We are ReVestir</h1>
-                    <p>Quem somos nós</p>
-                    <p>Trabalha connosco</p>
-                    
-                
+            <div className='Revestirfooter'><h1>We are ReVestir</h1>
+                <p>Quem somos nós</p>
+                <p>Trabalha connosco</p>
+
+
 
             </div>
             <div className='Revestirfooter2'><h1 >Pode interessar</h1>
