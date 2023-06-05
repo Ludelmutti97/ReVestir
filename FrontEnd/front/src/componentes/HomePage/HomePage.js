@@ -1,6 +1,5 @@
 import React from 'react';
 import './HomePage.css';
-
 import camiseta from '../imagens/camiseta.png';
 import calcas from '../imagens/calcas.png';
 import logorevestir from '../imagens/logorevestir.png';
@@ -11,6 +10,7 @@ import sapatilhas from '../imagens/sapatilhas.png';
 import scrolldown from '../imagens/scrolldown.png';
 import usericon from '../imagens/usericon.png';
 import hoodie from '../imagens/hoodie.png';
+
 
 function HomePage() {
   return (
