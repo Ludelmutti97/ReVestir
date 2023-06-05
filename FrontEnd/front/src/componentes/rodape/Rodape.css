@@ -1,0 +1,46 @@
+.footer {
+    background-color: rgb(225, 206, 129);
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 500px;
+  }
+  
+  .Revestirfooter,
+  .Revestirfooter2 {
+    margin-bottom: 20px;
+    
+  }
+  
+  .Revestirfooter h1,
+  .Revestirfooter2 h1 {
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: bold;
+    
+    margin-bottom: 10px;
+  }
+  
+  .Revestirfooter p,
+  .Revestirfooter2 p {
+    color: #ffffff;
+    font-size: 25px;
+    margin: 0;
+    
+  }
+  
+  .logos {
+    margin-top: 20px;
+  }
+  
+  .logos h3 {
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .logos img {
+    margin-right: 10px;
+    vertical-align: middle;
+    margin-bottom: 18%;
+  }
