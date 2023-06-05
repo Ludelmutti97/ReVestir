@@ -93,7 +93,7 @@ async function removeOutFit(id, uid) {
   return deletedOutfit;
 }
 
-//Filtro pela avaliação dos melhores //--- Verificar
+//Filtro pela avaliação dos melhores //
 
 async function findTop() {
   const collection = await getMongoCollection(collectionName);
@@ -106,7 +106,7 @@ async function findTop() {
 }
 
 
-// Buscar Categorias
+// Buscar Categoria
 async function findCategory(categoria) {
   const collection = await getMongoCollection(collectionName);
 
@@ -143,17 +143,17 @@ async function findMaterial(material) {
 }
 
 // Buscar p/ Avaliação
-async function findRating(material) {
+async function findRating(rating) {
   const collection = await getMongoCollection(collectionName);
 
-  const result = await collection.find({ material: Number(material) }).toArray();
+  const result = await collection.find({ rating: (rating) }).toArray();
 
   return result;
 }
 
 
 
-// Filtro todas a categoria sidebar
+// Filtro todas a categoria sidebar*******
 
 async function findFilter(categoria) {
   const collection = await getMongoCollection(collectionCategory);
@@ -164,14 +164,20 @@ async function findFilter(categoria) {
   return filteredProducts;
 }
 
-//                    ***Verificar****
+//                    
 // CRIAR AVALIAÇÂO
-async function findReview(productId) {
-  const collection = await getMongoCollection(collectionReview);
-  const avaliacao = await collection.insertOne({ _id: ObjectId(productId) });
+async function findReview(rating, pid) {
+  const collection = await getMongoCollection(collectionName);
+  const avaliacao = await collection.updateOne({ _id: new ObjectId(pid)},
+  { $set: rating })
+ 
 
-  return avaliacao.insertedId;
+
+  return avaliacao.value
+  
+  
 }
+
 
 module.exports = {
   findProdutos,

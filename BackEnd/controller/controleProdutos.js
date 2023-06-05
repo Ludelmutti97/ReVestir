@@ -6,14 +6,14 @@ const {
   getFavorite,
   getsearchProducts,
   getFilterProductsByCategory,
-  addProductReview,
   getCategory,
   addOutFit,
   getUser,
   getColor,
   getGenders,
   getMaterial,
-  getRating
+  getRating,
+  addProductReview
 } = require("../controller/service/auth");
 
 const { removeOutFit } = require("./utils/auth");
@@ -243,25 +243,28 @@ app.get("/api/products/filter", async (req, res) => {
   }
 });
 
-// @desc    Create new review
-// @route   POST /api/products/:id/reviews
 
-app.post("/api/products/:id/reviews", async (req, res) => {
-  const productId = req.params.id;
-  const { name, rating, comment } = req.body;
+// @desc    Create new review
+// @route   POST /api/forum/:id/rating
+
+app.post("/api/products/:id/rating",  async (req, res) => {
   try {
-    await addProductReview(productId, {
-      name,
-      rating,
-      comment,
-    });
-    return res
-      .status(201)
-      .json({ message: "Review added", product: updatedProduct });
+      const updatedProduct = await addProductReview(req.body, req.params.id)
+
+      const rating = req.body
+      
+      if (rating < 1 || rating > 5) {
+        return res.status(400).json({ message: "Rating invalido" })
+      }
+
+      
+      return res.status(200).json({ message: "Rating added", product: updatedProduct })
+      
+     
   } catch (err) {
-    return res.status(404).json({ message: "Product not found" });
+      console.log(err)
   }
-});
+})
 
 
 

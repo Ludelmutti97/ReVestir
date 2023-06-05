@@ -106,7 +106,7 @@ async function getRating(rating) {
   const pedido = await findRating(rating);
   return pedido;
 }
-// Filter Categoria (sideBar) JUNTAR TODAS AS CATEGORIA
+// Filter Categoria (sideBar) JUNTAR TODAS AS CATEGORIA***
 
 async function getFilterProductsByCategory() {
   const pedido = await findFilter();
@@ -114,17 +114,9 @@ async function getFilterProductsByCategory() {
 }
 
 //ADD Review
-async function addProductReview(productId, review) {
-  const product = await findReview(productId);
-
-  if (product) {
-    product.reviews.push(review);
-    product.numReviews = product.reviews.length;
-
-    await collectionName.updateOne({ _id: productId }, { $set: product });
-
-    return;
-  }
+async function addProductReview(rating, pid) {
+  const pedido = await findReview(rating, pid);
+  return pedido;
 }
 
 
