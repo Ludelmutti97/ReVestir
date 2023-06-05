@@ -10,6 +10,7 @@ import sapatilhas from '../imagens/sapatilhas.png';
 import scrolldown from '../imagens/scrolldown.png';
 import usericon from '../imagens/usericon.png';
 import hoodie from '../imagens/hoodie.png';
+import { Link } from 'react-router-dom';
 
 
 function HomePage() {
@@ -19,8 +20,12 @@ function HomePage() {
       <div className="div2">
         <header className="App-header">
           <img src={logorevestir} alt="logo" height="200" width="200"  />
+          <Link to="/closet">
            <img className="usericon" src={usericon} alt="usericon" height="50" />
+          </Link>
+            <Link to="/produtos">
            <p className="prods">Produtos</p>
+            </Link>
         </header>
         <div className="div1">
           <img src={camiseta} alt="camisola" height="250" />
