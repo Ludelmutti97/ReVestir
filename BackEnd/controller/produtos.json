@@ -1,126 +1,52 @@
+[{
+  
+  "nome": "Blazer Lã Covilhã",
+  "categoria":  "casaco",
+  "cor": "Marrom",
+  "material": "100% lã  e Botão reciclados",
+  "sexo": "Feminino",
+  "descrição": "Este blazer feito de 100% lã vai mantê-lo tão aquecido que você nem vai acreditar. Possui bolsos laterais e três botões na frente, dando um toque de sofisticação a qualquer look. ",
+  "onde comprar":"https://naz.pt/collections/women-jackets/products/covilha-wool-blazer-checked-brown?variant=43688041021682",
+  "favorite":"false"
+},
+{
+  "nome": "Casaco Algodão Orgânico Milfontes",
+  "cor": "Jeans",
+  "categoria": "casaco",
+  "material": "100% algodão orgânico",
+  "sexo": "Masculino",
+  "descrição": "Esta jaqueta é confeccionada em lona 100% algodão orgânico, e seu corte levemente oversized proporciona um caimento relaxado e confortável, perfeito para o dia a dia. ",
+  "onde comprar": "https://naz.pt/collections/men/products/milfontes-cotton-jacket-men-blue?variant=32166089949322",
+  "favorite":"false"
+},
+{
+  "nome": "JASMIN RED SANDÁLIAS VEGAN DE SALTO COM FIVELA",
+  "cor": "Vermelho",
+  "categoria":  "sapato",
+  "material": "Transpiráveis, eco-responsáveis, antimicrobianos e hipoalergénicos; Corte: microfibra com efeito de camurça",
+  "sexo": "Feminino",
+  "descrição": "Este modelo de tonalidade sólida e sóbria tem um design equilibrado que combina com um visual elegante e também com um mais casual.",
 
-[
-    {
-      "nome": "Produto 1",
-      "cor": "Verde",
-      "material": "Algodão Ecológico",
-      "sexo": "Unissex"
-    },
-    {
-      "nome": "Produto 2",
-      "cor": "Azul",
-      "material": "Fibra de Bambu",
-      "sexo": "Masculino"
-    },
-    {
-      "nome": "Produto 3",
-      "cor": "Vermelho",
-      "material": "PET Reciclado",
-      "sexo": "Feminino"
-    },
-    {
-      "nome": "Produto 4",
-      "cor": "Amarelo",
-      "material": "Algodão Ecológico",
-      "sexo": "Unissex"
-    },
-    {
-      "nome": "Produto 5",
-      "cor": "Roxo",
-      "material": "Fibra de Bambu",
-      "sexo": "Feminino"
-    },
-    {
-      "nome": "Produto 6",
-      "cor": "Preto",
-      "material": "PET Reciclado",
-      "sexo": "Masculino"
-    },
-    {
-      "_id": "ObjectId7",
-      "nome": "Produto 7",
-      "cor": "Branco",
-      "material": "Algodão Ecológico",
-      "sexo": "Unissex"
-    },
-    {
-      "nome": "Produto 8",
-      "cor": "Laranja",
-      "material": "Fibra de Bambu",
-      "sexo": "Feminino"
-    },
-    {
-      "nome": "Produto 9",
-      "cor": "Cinza",
-      "material": "PET Reciclado",
-      "sexo": "Masculino"
-    },
-    {
-      "nome": "Produto 10",
-      "cor": "Verde",
-      "material": "Algodão Ecológico",
-      "sexo": "Unissex"
-    },
-    {
-      "nome": "Produto 11",
-      "cor": "Azul",
-      "material": "Fibra de Bambu",
-      "sexo": "Masculino"
-    },
-    {
-      "nome": "Produto 12",
-      "cor": "Vermelho",
-      "material": "PET Reciclado",
-      "sexo": "Feminino"
-    },
-    {
-      "nome": "Produto 13",
-      "cor": "Amarelo",
-      "material": "Algodão Ecológico",
-      "sexo": "Unissex"
-    },
-    {
-      "nome": "Produto 14",
-      "cor": "Roxo",
-      "material": "Fibra de Bambu",
-      "sexo": "Feminino"
-    },
-    {
-      "nome": "Produto 15",
-      "cor": "Preto",
-      "material": "PET Reciclado",
-      "sexo": "Masculino"
-    },
-    {
-      "nome": "Produto 16",
-      "cor": "Branco",
-      "material": "Algodão Ecológico",
-      "sexo": "Unissex"
-    },
-    {
-      "nome": "Produto 17",
-      "cor": "Laranja",
-      "material": "Fibra de Bambu",
-      "sexo": "Feminino"
-    },
-    {
-      "nome": "Produto 18",
-      "cor": "Cinza",
-      "material": "PET Reciclado",
-      "sexo": "Masculino"
-    },
-    {
-      "nome": "Produto 19",
-      "cor": "Verde",
-      "material": "Algodão Ecológico",
-      "sexo": "Unissex"
-    },
-    {
-      "nome": "Produto 20",
-      "cor": "Azul",
-      "material": "Fibra de Bambu",
-      "sexo": "Masculino",
-      "favorite": false
-      
-    }
-  ]
+  "onde comprar":"https://www.nae-vegan.com/pt/mulher/salto-alto/jasmin-red-sandalias-vegan_p5004.html?id=678&cat=422&pc=1",
+  "favorite":"false"
+},
+{
+  "nome": "BONÉ DE VELUDO",
+  "cor": "bege",
+  "categoria":  "bone",
+  "material": "100% Algodão Orgânico",
+  "sexo": "Unissex",
+  "descrição": "Este boné de veludo tem certificação OEKO-TEX. OEKO-TEX® STANDARD 100 é um dos rótulos mais conhecidos do mundo para têxteis testados quanto a substâncias nocivas. Esta certificação garante que cada componente do produto (cada fio, botão e outros acessórios) é inofensivo para a saúde humana.",
+  "onde comprar":"https://isto.pt/products/corduroy-cap-off-white?variant=43406094270711",
+  "favorite":"false"
+},
+{
+  "nome": "Vestido de linho Jane",
+  "cor": "Vermelho",
+  "categoria":  "Vestido",
+  "material": "100% linho. Ziper YKK 100% reciclado. ",
+  "sexo": "Feminino",
+  "descrição": "Eleve o seu estilo de verão com perfeição. Feito de 100% linho, este vestido elegante apresenta um decote halter, corpete forrado justo e uma deslumbrante alça cruzada nas costas para melhor suporte. A saia midi em camadas",
+  "onde comprar":"https://naz.pt/products/jane-linen-dress-red?variant=46479623815491",
+  "favorite":"false"
+}]

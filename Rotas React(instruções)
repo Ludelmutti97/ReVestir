@@ -1,0 +1,120 @@
+Depois import no app.js
+import {BrowserRouter} from "react-router-dom"
+
+import Routes from"./Routes"
+
+
+
+
+criar um ficheiro em src como nome Router.js
+
+colocar a tag <BrowerRouter>
+
+
+<Routes/>
+todos os componentes
+
+
+
+</BrowerRouter>
+--------
+criar um ficheiro em src como nome Router.js
+
+importar o react ->->
+import React from"react"
+import {Switch, Route} from "react-router-dom"
+
+
+import Home from "./page/Home "
+import Usuario from "./page/Usuario "
+
+export default () => {
+
+return(
+	<Switch>
+	   <Route exact path = "/">
+	<Home/>
+
+	  </Route>
+
+
+	<Route  exact path = "/usuario">
+		<Usuario />
+	  </Route>
+
+
+	<Route path = "/sobre">
+		Pagina Sobre a loja
+
+	  </Route>
+
+
+	</Switch>
+
+)
+
+
+
+}
+
+
+-------
+ criar uma pasta com o nome pages.js
+
+criar uma outra pasta dentro da page.js. como nome de Home e criar  um ficheiro index.js =>
+
+import React from"react"
+
+const Page =() => {
+	return (
+	<div>Home</div>
+
+
+
+
+
+
+	
+)
+}
+
+export default Page
+
+------
+
+criar uma outra pasta dentro da page.js. como nome de Usuario e criar  um ficheiro index.js  e o styled.js =>
+
+index.js
+
+import React from"react"
+
+const Page =() => {
+	return (
+	<div>Usuario</div>
+
+
+
+
+
+
+	
+)
+}
+
+export default Page
+
+
+
+
+no Header, no index, colocar o link onde esta o nome do botao ou o nome do usurio.
+  ainda no index importar =>
+
+
+import{Link} from"""react-router-dom"
+
+
+<Link to ="/">Inicio pagina inicial </Link>
+
+<Link to ="/usuario">Usuario  </Link>
+
+
