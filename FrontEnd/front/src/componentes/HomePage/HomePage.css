@@ -12,17 +12,16 @@
 }
 
 .footer {
- 
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: flex-end;
   height: 20vh;
-  /* Adicionado para posicionar no fundo da página */
+  color: aliceblue;  /* Adicionado para posicionar no fundo da página */
 }
 
 
 .footer img {
-  margin: 2% 10px;
+  margin: 1% 5px;
   /* Ajuste os valores de margem conforme necessário */
 
 }
@@ -34,6 +33,7 @@
   height: 20vh;
   /* Adicionado para posicionar no fundo da página */
   animation: bounce 1s infinite;
+  margin-bottom: 10%
   ;
 }
 
