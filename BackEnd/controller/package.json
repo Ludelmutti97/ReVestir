@@ -5,6 +5,8 @@
   "main": "auth.js",
   "scripts": {
     "start:auth": "node auth.js",
+    "import:user": "node tasks/import_user.js",
+    
     "dev": "nodemon controleProdutos.js"
   },
   "author": "Luanna",

@@ -4,6 +4,10 @@ import HomePage from "./componentes/HomePage/HomePage";
 import Teste1 from "./componentes/AllProdutos/produtos";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Closet from "./componentes/Closet/Closet"
+import Carousel from "./componentes/carrosel/Carousel";
+import Footer from "./componentes/rodape/Rodape"
+import TodosOsProdutos from "./TodosOsProdutos"
+
 function App() {
   return (
     <Router>

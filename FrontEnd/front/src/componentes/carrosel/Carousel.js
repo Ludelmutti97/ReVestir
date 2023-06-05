@@ -31,7 +31,7 @@ function Carousel() {
                 <motion.div
                     className="inner"
                     drag="x"
-                    dragConstraints={{ right: window.innerWidth - 1000, left:  -500}}
+                    dragConstraints={{ right: window.innerWidth - 1000, left:  -1000}}
                     initial={{ x: 100}}
                     animate={{ x: 0}}
                     transition={{duration: 0.8}}

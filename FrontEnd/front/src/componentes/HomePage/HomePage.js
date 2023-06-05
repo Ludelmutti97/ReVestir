@@ -16,7 +16,6 @@ import { Link } from 'react-router-dom';
 function HomePage() {
   return (
     <div className="App">
-      <div></div>
       <div className="div2">
         <header className="App-header">
           <img src={logorevestir} alt="logo" height="200" width="200"  />
@@ -29,7 +28,7 @@ function HomePage() {
         </header>
         <div className="div1">
           <img src={camiseta} alt="camisola" height="250" />
-           <img src={hoodie} alt="hoodie" height="400" />
+          <img src={hoodie} alt="hoodie" height="400" />
           <img src={calcas} alt="calcas" height="300" />
           <img src={sapatilhas} alt="sapatilhas" height="130" />
         </div>
@@ -41,15 +40,11 @@ function HomePage() {
         <div className="scrolldown">
           <img src={scrolldown} alt="scrolldown" height="75" />
         </div>
-        <div className="footer">
-          <img src={instagramlogo} alt="camisola" height="50" />
-          <img src={facebooklogo} alt="camisola" height="50" />
-          <img src={whatsapplogo} alt="camisola" height="50" />
-        </div>
+
         <div>
 
 
-          
+
         </div>
 
 

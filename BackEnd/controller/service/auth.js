@@ -1,85 +1,150 @@
-const { findProdutos, findfavoriteById, findFavoriteAll,findTop,findFilter, findSearchBox , findCategory } = require("../utils/auth");
+const {
+  findProdutos,
+  findfavoriteById,
+  findFavoriteAll,
+  findRating,
+  findFilter,
+  findSearchBox,
+  findCategory,
+  findReview,
+  createUser,
+  findGenero,
+  findUser,
+  createOutFits,
+  removeOutFit,
+  findCor,
+  findMaterial,
+  
+
+} = require("../utils/auth");
 const { findProductById } = require("../utils/auth");
+
+async function addUser(user) {
+  const pedido = await createUser(user);
+  return pedido;
+}
+async function getUser() {
+  const pedido = await findUser();
+  return pedido;
+}
+
+// Todos--
 
 async function getProduto() {
   const pedido = await findProdutos();
   return pedido;
 }
 
+//  Barra de pesquisa-
+async function getsearchProducts(termo) {
+  const pedido = await findSearchBox(termo);
+  return pedido;
+}
+
+// Procurar pelo  product id
 async function getProdutoId(id) {
   const pedido = await findProductById(id);
   return pedido;
 }
-async function getProdutoById(id) {
-  const pedido = await findfavoriteById(id);
+
+// ADD aos favoritos--
+async function getProdutoById(id, uid) {
+  const pedido = await findfavoriteById(id, uid);
   return pedido;
 }
+
+// ALL Favoritos--
 async function getFavorite() {
   const pedido = await findFavoriteAll();
   return pedido;
-
 }
 
-// Add Outfit FAZER----------------------------------------------
+// Add Outfit --
 
-async function ghghg() {
-  const pedido = await ghgh();
+async function addOutFit(id, uid) {
+  const pedido = await createOutFits(id, uid);
   return pedido;
-
 }
 
-//----------------------------------------------------------------
-
-
-
-// ver com o RAFA----------------------------------------------
-async function getAddProductReview(productId, review) {
-  
-    const product = await findReview(productId);
-
-    if (product) {
-      product.reviews.push(review);
-      product.numReviews = product.reviews.length;
-
-      await collectionName.updateOne(
-        { _id: ObjectId(productId) },
-        { $set: product }
-      )
-
-      return 
-    }
-  
-}
-//-----------------------------------------------------------
-
-
-
-async function getTopRatedProducts() {
-  const pedido = await findTop();
+// Delete Outfit
+async function deleteOutFit(id, uid) {
+  const pedido = await removeOutFit(id, uid);
   return pedido;
-
 }
 
-async function getCreateCategory() {
-  const pedido = await findCategory();
+
+//Filter Por Categoria
+async function getCategory(category) {
+  const pedido = await findCategory(category);
   return pedido;
-
 }
+// Filter Por Cor
+async function getColor(cor) {
+  const pedido = await findCor(cor);
+  return pedido;
+}
+
+
+// Filter Por sexo
+
+async function getGenders(cor) {
+  const pedido = await findGenero(cor);
+  return pedido;
+}
+
+
+// Filter Por material
+
+async function getMaterial(cor) {
+  const pedido = await findMaterial(cor);
+  return pedido;
+}
+
+// Filter Por rating(avaliação)
+
+async function getRating(rating) {
+  const pedido = await findRating(rating);
+  return pedido;
+}
+// Filter Categoria (sideBar) JUNTAR TODAS AS CATEGORIA
 
 async function getFilterProductsByCategory() {
   const pedido = await findFilter();
   return pedido;
-
 }
 
-async function getsearchProducts() {
-  const pedido = await findSearchBox();
-  return pedido;
+//ADD Review
+async function addProductReview(productId, review) {
+  const product = await findReview(productId);
 
+  if (product) {
+    product.reviews.push(review);
+    product.numReviews = product.reviews.length;
+
+    await collectionName.updateOne({ _id: productId }, { $set: product });
+
+    return;
+  }
 }
 
 
+module.exports = {
+  getProduto,
+  getProdutoId,
+  getProdutoById,
+  getFavorite,
+  addProductReview,
+  getRating,
+  getCategory,
+  getFilterProductsByCategory,
+  getsearchProducts,
+  addUser,
+  getUser,
+  addOutFit,
+  deleteOutFit,
+  getColor,
+  getGenders,
+  getMaterial,
+  
 
-
-module.exports = { getProduto, getProdutoId , getProdutoById,  getFavorite, getAddProductReview,getTopRatedProducts, 
-  getCreateCategory, getFilterProductsByCategory, getsearchProducts};
+};
