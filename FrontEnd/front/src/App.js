@@ -1,27 +1,19 @@
+import React from "react";
 import "./App.css";
-import "./componentes/barradePesquisa/barraDePesquisa.css";
-import BarraDePesquisa from "./componentes/barradePesquisa/barraDePesquisa";
+import HomePage from "./componentes/HomePage/HomePage";
+import Teste1 from "./componentes/teste/teste1";
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <header >
-        <img src={require("./Logo.png")} className="logo" />  
-        <BarraDePesquisa />
-        <h3 > Produtos</h3>
-        <span >👧🏽</span>
-      
-      </header>
-
-
- <br>
- </br>
-
-      <footer className="footer">
-        <div> Redes Sociais</div>
-        </footer>
-    </div>
+    <Router>
+      <Routes>
+        <Route exact path="/" element={<HomePage/>} />
+        <Route path="/produtos" element={<Teste1/>} />
+      </Routes>
+    </Router>
   );
 }
 
 export default App;
+
