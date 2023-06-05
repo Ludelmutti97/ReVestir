@@ -7,7 +7,8 @@
   "sexo": "Feminino",
   "descrição": "Este blazer feito de 100% lã vai mantê-lo tão aquecido que você nem vai acreditar. Possui bolsos laterais e três botões na frente, dando um toque de sofisticação a qualquer look. ",
   "onde comprar":"https://naz.pt/collections/women-jackets/products/covilha-wool-blazer-checked-brown?variant=43688041021682",
-  "favorite":"false"
+  "favorite":"false",
+  "rating": "5"
 },
 {
   "nome": "Casaco Algodão Orgânico Milfontes",
@@ -17,7 +18,10 @@
   "sexo": "Masculino",
   "descrição": "Esta jaqueta é confeccionada em lona 100% algodão orgânico, e seu corte levemente oversized proporciona um caimento relaxado e confortável, perfeito para o dia a dia. ",
   "onde comprar": "https://naz.pt/collections/men/products/milfontes-cotton-jacket-men-blue?variant=32166089949322",
-  "favorite":"false"
+  "favorite":"false",
+  "rating": "4,5"
+
+
 },
 {
   "nome": "JASMIN RED SANDÁLIAS VEGAN DE SALTO COM FIVELA",
@@ -28,7 +32,8 @@
   "descrição": "Este modelo de tonalidade sólida e sóbria tem um design equilibrado que combina com um visual elegante e também com um mais casual.",
 
   "onde comprar":"https://www.nae-vegan.com/pt/mulher/salto-alto/jasmin-red-sandalias-vegan_p5004.html?id=678&cat=422&pc=1",
-  "favorite":"false"
+  "favorite":"false",
+  "rating": "3"
 },
 {
   "nome": "BONÉ DE VELUDO",
@@ -38,7 +43,8 @@
   "sexo": "Unissex",
   "descrição": "Este boné de veludo tem certificação OEKO-TEX. OEKO-TEX® STANDARD 100 é um dos rótulos mais conhecidos do mundo para têxteis testados quanto a substâncias nocivas. Esta certificação garante que cada componente do produto (cada fio, botão e outros acessórios) é inofensivo para a saúde humana.",
   "onde comprar":"https://isto.pt/products/corduroy-cap-off-white?variant=43406094270711",
-  "favorite":"false"
+  "favorite":"false",
+  "rating": "4"
 },
 {
   "nome": "Vestido de linho Jane",
@@ -48,5 +54,6 @@
   "sexo": "Feminino",
   "descrição": "Eleve o seu estilo de verão com perfeição. Feito de 100% linho, este vestido elegante apresenta um decote halter, corpete forrado justo e uma deslumbrante alça cruzada nas costas para melhor suporte. A saia midi em camadas",
   "onde comprar":"https://naz.pt/products/jane-linen-dress-red?variant=46479623815491",
-  "favorite":"false"
+  "favorite":"false",
+  "rating": "5"
 }]
