@@ -1,20 +1,18 @@
-import { useState } from 'react'
-import React from 'react';
-import './luana.css'
-import {Link} from 'react-router-dom';
+import { useState } from "react";
+import React from "react";
+import "./luana.css";
+//import {Link} from 'react-router-dom';
 
-function Luana (){
-    const [isFavorite, setIsFavorite] = useState(false);
+export function Luana() {
+  const [isFavorite, setIsFavorite] = useState(false);
 
   const handleClick = async () => {
     try {
-      const response = await fetch('/api/favorite/:id');
+      const response = await fetch("/api/favorite/:id");
       if (response.ok) {
         const data = await response.json();
         setIsFavorite(true);
-        return data
-      } else {
-        throw new Error('not_found');
+        return data;
       }
     } catch (err) {
       console.log(err);
@@ -22,36 +20,83 @@ function Luana (){
   };
 
   return (
-
-    <div className='favorite-button-wrapper'>
-    <button onClick={handleClick}  className="favorite-button">
-      {isFavorite ? 'Favorited' : '❤️'}
-    </button>
+    <div className="favorite-button-wrapper">
+      <button onClick={handleClick} className="favorite-button">
+        {isFavorite ? "Favorited" : "❤️"}
+      </button>
+      <AddToOutfitButton />
+      <SearchBar />
     </div>
-  )
+  );
+}
 
-  }
+export function AddToOutfitButton(productId) {
+  const [message, setMessage] = useState("");
 
-const AddToOutfitButton = ({ productId }) => {
-    const handleClick = async () => {
-      try {
-        const response = await fetch(`/api/outfit/${productId}`, {
-          method: 'POST'
-        });
-        if (response.ok) {
-          const data = await response.json();
-          console.log(data); // Aqui você pode manipular a resposta do backend
-        } else {
-          throw new Error('Erro');
-        }
-      } catch (err) {
-        console.log(err);
+  const handleClick = async () => {
+    try {
+      const response = await fetch(`/api/outfit/${productId}`, {
+        method: "POST",
+      });
+      if (response.ok) {
+        const data = await response.json();
+        setMessage(data.message); // Armazena a mensagem do backend no estado
+        console.log(data);
       }
-    };
-  
-    return (
-      <button onClick={handleClick}>Add to Outfit</button>
-    );
-  }
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
-export default Luana
+  return (
+    <div>
+      <button onClick={handleClick} className="outFit">
+        Add to Outfit
+      </button>
+      {message && <p>{message}</p>}
+    </div>
+  );
+}
+
+export const SearchBar = () => {
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const handleChange = (event) => {
+    setSearchTerm(event.target.value);
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    console.log(searchTerm);
+    try {
+      const response = await fetch(`/api/products/search?q=${searchTerm}`, {
+        method: "GET",
+      });
+      console.log(response.json());
+      if (response.ok) {
+        const data = await response.json();
+        console.log(data);
+
+        //   } else {
+        //     throw new Error("SearchBox not found");
+      }
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  return (
+    <form onSubmit={handleSubmit} className="form">
+      <input
+        type="text"
+        placeholder=""
+        value={searchTerm}
+        onChange={handleChange}
+        className="input"
+      />
+      <button type="submit" className="button">
+        Search{" "}
+      </button>
+    </form>
+  );
+};

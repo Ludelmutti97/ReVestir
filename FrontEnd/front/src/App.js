@@ -11,7 +11,7 @@ import Closet from "./componentes/Closet/Closet"
 //import TodosOsProdutos from "./TodosOsProdutos"
 
 //import Carousel from "./componentes/carrosel/Carousel";
-import Luana from "./componentes/luana/luana";
+import {Luana} from "./componentes/luana/luana";
 
 
 
