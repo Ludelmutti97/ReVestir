@@ -3,17 +3,18 @@ import './HomePage.css';
 import camiseta from '../imagens/camiseta.png';
 import calcas from '../imagens/calcas.png';
 import logorevestir from '../imagens/logorevestir.png';
-import instagramlogo from '../imagens/instagramlogo.png'
-import facebooklogo from '../imagens/facebooklogo.png'
-import whatsapplogo from '../imagens/whatsapplogo.png'
 import sapatilhas from '../imagens/sapatilhas.png';
 import scrolldown from '../imagens/scrolldown.png';
 import usericon from '../imagens/usericon.png';
 import hoodie from '../imagens/hoodie.png';
+import Footer from '../rodape/rodape';
+import SearchBar from '../barradePesquisa/BarraDePesquisa';
 import { Link } from 'react-router-dom';
 
 
+
 function HomePage() {
+
   const handleSearch = (searchTerm) => {
     // Aqui você pode fazer alguma lógica de busca com o termo fornecido
     console.log('Buscando por:', searchTerm);
