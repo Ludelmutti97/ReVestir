@@ -10,9 +10,13 @@ import Closet from "./componentes/Closet/Closet"
 //import TodosOsProdutos from "./TodosOsProdutos"
 
 //import Carousel from "./componentes/carrosel/Carousel";
+<<<<<<< HEAD
 import Luana from "./componentes/luana/luana";
 import Example from "./componentes/carrosel/Roupa/Carrousel/CarroselHome"
 import Produtos from "./componentes/produtos/produtos";
+=======
+import {Luana} from "./componentes/luana/luana";
+>>>>>>> 162bb53c49b374c17fd7d173c706ec1bfadce99f
 
 
 
