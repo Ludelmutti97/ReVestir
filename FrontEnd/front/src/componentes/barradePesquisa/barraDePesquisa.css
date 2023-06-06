@@ -1,0 +1,30 @@
+    .form {
+  
+    display: flex;
+    align-items: center;
+    }
+    
+    .input {
+ 
+    margin-right: 10px; 
+    padding: 5px; 
+    font-size: 16px; 
+    opacity: 0.5; /* Adiciona transparência de 50% */ 
+    border-radius: 5px; /* Raio de borda de 5px */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra */
+    }
+    
+    .button {
+    padding: 5px 10px;
+    font-size: 16px;
+    background-color: #cdf0c5;
+
+    color: white;
+    border: none;  
+     
+    cursor: pointer;
+    }
+
+
+        
+    
