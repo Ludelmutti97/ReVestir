@@ -2,6 +2,13 @@
   background-color: #cdf0c5;
 }
 
+.header {
+  display: flex;
+  flex-direction: row;
+ gap: 15%;
+  
+}
+
 
 .div1 {
   display: flex;
