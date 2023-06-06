@@ -11,6 +11,7 @@ import scrolldown from '../imagens/scrolldown.png';
 import usericon from '../imagens/usericon.png';
 import hoodie from '../imagens/hoodie.png';
 import { Link } from 'react-router-dom';
+import vestido from '../imagens/vestido.png';
 
 
 function HomePage() {
@@ -27,20 +28,19 @@ function HomePage() {
             </Link>
         </header>
         <div className="div1">
-          <img src={camiseta} alt="camisola" height="250" />
-          <img src={hoodie} alt="hoodie" height="400" />
-          <img src={calcas} alt="calcas" height="300" />
-          <img src={sapatilhas} alt="sapatilhas" height="130" />
+          <img src={camiseta} alt="camisola" height="200" />
+          <img src={calcas} alt="calcas" height="225" />
+          <img src={hoodie} alt="hoodie" height="250" />
+          <img src={sapatilhas} alt="sapatilhas" height="200" />
+          <img src={vestido} alt="vestido" height="300" width={300}/>
         </div>
       </div>
       <div className="div3">
         <div className="bodyindex">
-
         </div>
         <div className="scrolldown">
           <img src={scrolldown} alt="scrolldown" height="75" />
         </div>
-
         <div>
 
 
