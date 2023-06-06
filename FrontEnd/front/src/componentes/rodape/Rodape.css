@@ -1,15 +1,10 @@
 .footer {
-    background-color: rgb(225, 206, 129);
     color: #ffffff;
     text-align: center;
     padding: 20px 500px;
   }
   
-  .Revestirfooter,
-  .Revestirfooter2 {
-    margin-bottom: 20px;
-    
-  }
+
   
   .Revestirfooter h1,
   .Revestirfooter2 h1 {
