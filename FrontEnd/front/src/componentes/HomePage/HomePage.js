@@ -3,16 +3,15 @@ import './HomePage.css';
 import camiseta from '../imagens/camiseta.png';
 import calcas from '../imagens/calcas.png';
 import logorevestir from '../imagens/logorevestir.png';
-//import instagramlogo from '../imagens/instagramlogo.png'
-//import facebooklogo from '../imagens/facebooklogo.png'
-//import whatsapplogo from '../imagens/whatsapplogo.png'
+import instagramlogo from '../imagens/instagramlogo.png'
+import facebooklogo from '../imagens/facebooklogo.png'
+import whatsapplogo from '../imagens/whatsapplogo.png'
 import sapatilhas from '../imagens/sapatilhas.png';
 import scrolldown from '../imagens/scrolldown.png';
 import usericon from '../imagens/usericon.png';
 import hoodie from '../imagens/hoodie.png';
-
 import { Link } from 'react-router-dom';
-import SearchBar from '../barradePesquisa/BarraDePesquisa';
+
 
 function HomePage() {
   const handleSearch = (searchTerm) => {
@@ -52,13 +51,15 @@ function HomePage() {
         </div>
 
         <div>
-
-
-
+        <Footer/>
         </div>
 
 
       </div>
+
+      
+
+
     </div>
   );
 }
