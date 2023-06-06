@@ -14,7 +14,7 @@ const images = [roupa4, roupa5, roupa6, roupa7, roupa8, roupa9]
 
 function Carousel() {
     const ref = useRef();
-    const [width, setWidth] = useState(0)
+    const [ width, setWidth] = useState(0)
 
     
         useEffect(() => {
