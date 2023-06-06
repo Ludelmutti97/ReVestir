@@ -1,7 +1,6 @@
 import React from "react";
 import "./App.css";
 import HomePage from "./componentes/HomePage/HomePage";
-import Produtos from "./componentes/AllProdutos/Produtos";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Closet from "./componentes/Closet/Closet"
 
@@ -12,6 +11,8 @@ import Closet from "./componentes/Closet/Closet"
 
 //import Carousel from "./componentes/carrosel/Carousel";
 import Luana from "./componentes/luana/luana";
+import Example from "./componentes/carrosel/Roupa/Carrousel/CarroselHome"
+import Produtos from "./componentes/produtos/produtos";
 
 
 
@@ -21,11 +22,11 @@ function App() {
     <Router>
       <Routes>
         <Route exact path="/" element={<HomePage/>} />
-        <Route path="/produtos" element={<Produtos/>} />
+        <Route path="/carrosel1" element={<Example/>} />
         <Route path="/Closet" element={<Closet/>} />
-
-
         <Route path="/luana" element={<Luana/>} />
+        <Route path="/produtos" element={<Produtos/>} />
+        
 
       </Routes>
     </Router> 

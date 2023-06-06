@@ -8,7 +8,9 @@ import scrolldown from '../imagens/scrolldown.png';
 import usericon from '../imagens/usericon.png';
 import hoodie from '../imagens/hoodie.png';
 import Footer from '../rodape/rodape';
-import SearchBar from '../barradePesquisa/BarraDePesquisa';
+import SearchBar from '../barradePesquisa/BarraDePesquisa'
+
+import Carrousel from '../carrosel/Roupa/Carrousel/CarroselHome'
 import { Link } from 'react-router-dom';
 
 
@@ -25,7 +27,7 @@ function HomePage() {
         <header className="header">
           <img src={logorevestir} alt="logo" height="200" width="200"  />
           
-            <SearchBar onSearch={handleSearch} />
+            <SearchBar onSearch={handleSearch}/>
           
             <Link to="/produtos">
            <p className="prods">Produtos</p>
@@ -49,6 +51,26 @@ function HomePage() {
         </div>
         <div className="scrolldown">
           <img src={scrolldown} alt="scrolldown" height="75" />
+        </div>
+        <div className='caixaHomePage'>
+          <h1 className='Titulos'>T-Sthirts</h1>
+          <Carrousel/>
+        </div>
+        <div className='caixaHomePage'>
+          <h1 className='Titulos'>Camisolas</h1>
+          <Carrousel />
+        </div>
+        <div className='caixaHomePage'>
+          <h1 className='Titulos'>Calças</h1>
+          <Carrousel />
+        </div>
+        <div className='caixaHomePage'>
+          <h1 className='Titulos'>Vestidos</h1>
+          <Carrousel />
+        </div>
+        <div className='caixaHomePage'>
+          <h1 className='Titulos'>Sapatilhas</h1>
+          <Carrousel />
         </div>
 
         <div>
