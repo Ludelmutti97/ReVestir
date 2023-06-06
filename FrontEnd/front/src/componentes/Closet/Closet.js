@@ -6,13 +6,15 @@ import coracaoicon from "../imagens/coracaoicon.png"
 import instagramlogo from '../imagens/instagramlogo.png'
 import facebooklogo from '../imagens/facebooklogo.png'
 import whatsapplogo from '../imagens/whatsapplogo.png'
-
+import { Link } from "react-router-dom";
 
 function Closet() {
     return (
         <div className="header">
             <div className="titulo">
+                <Link to="/">
                 <img className="returnicon" src={returnicon} alt="usericon" height="65" />
+                </Link>
                 <img className="closeticon" src={closet} alt="closet" height="70" />
             </div>
             <div>
