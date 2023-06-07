@@ -2,10 +2,13 @@ import React, { Component } from "react";
 import Carousel from "react-spring-3d-carousel";
 import { v4 as uuidv4 } from 'uuid';
 import { config } from "react-spring";
-import { styles } from "./CarroselHome.css";
-import Roupa6 from "../Roupa/roupa6.jpeg"
+import  "./CarroselHome.css";
 
-export default class Carrousel extends Component {
+
+
+
+
+export default class Example extends Component {
 
     
     constructor(props) {
