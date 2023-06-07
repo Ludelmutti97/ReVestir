@@ -14,19 +14,8 @@ function Footer() {
                 <p>Quem somos nós</p>
                 <p>Trabalha connosco</p>
 
-
-
             </div>
-            <div className='Revestirfooter2'><h1 >Pode interessar</h1>
-
-                <p >Vestidos</p>
-                <p >Camisola</p>
-                <p >T-shirt</p>
-                <p >sapatilhas</p>
-                <p >Calças</p>
-
-
-            </div>
+           
             <div className='logos'>
                 <h3>Redes Sociais:</h3>
 
