@@ -8,13 +8,13 @@ import scrolldown from '../imagens/scrolldown.png';
 import usericon from '../imagens/usericon.png';
 import hoodie from '../imagens/hoodie.png';
 import Footer from '../rodape/rodape';
-<<<<<<< HEAD
+
 import SearchBar from '../barradePesquisa/barraDePesquisa'
 
-=======
-import SearchBar from '../barradePesquisa/BarraDePesquisa'
+
+
 import { v4 as uuidv4 } from 'uuid';
->>>>>>> 880b3aff20a831d2f87ffe2da71f0079ea2bd5c6
+
 import Carrousel from '../Carrousel/CarroselHome'
 import { Link } from 'react-router-dom';
 import vestido from '../imagens/vestido.png';
@@ -131,23 +131,23 @@ function HomePage() {
         </div>
         <div className='caixaHomePage'>
           <h1 className='Titulos'>T-Sthirts</h1>
-          <CarrouselBlock items={tshirtsArray} />
+          <Carrousel items={tshirtsArray} />
         </div>
         <div className='caixaHomePage'>
           <h1 className='Titulos'>Camisolas</h1>
-          <CarrouselBlock items={tshirtsArray} />
+          <Carrousel items={tshirtsArray} />
         </div>
         <div className='caixaHomePage'>
           <h1 className='Titulos'>Calças</h1>
-          <CarrouselBlock items={calcassArray} />
+          <Carrousel items={calcassArray} />
         </div>
         <div className='caixaHomePage'>
           <h1 className='Titulos'>Vestidos</h1>
-          <CarrouselBlock items={tshirtsArray} />
+          <Carrousel items={tshirtsArray} />
         </div>
         <div className='caixaHomePage'>
           <h1 className='Titulos'>Sapatilhas</h1>
-          <CarrouselBlock items={tshirtsArray} />
+          <Carrousel items={tshirtsArray} />
         </div>
 
         <div>

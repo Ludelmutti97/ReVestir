@@ -2,7 +2,7 @@
   background-color: #cdf0c5;
 }
 
-.header_closet {
+.header {
   display: flex;
   flex-direction: row;
   gap: 15%;
