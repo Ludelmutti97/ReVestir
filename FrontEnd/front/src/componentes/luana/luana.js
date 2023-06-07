@@ -3,7 +3,24 @@ import React from "react";
 import "./luana.css";
 //import {Link} from 'react-router-dom';
 
+
+
 export function Luana() {
+  return (
+    <div className="formata">
+<AddToOutfitButton productId="647da6d2ff948d77053693f8" />
+<RemoveToOutfitButton productId="647da6d2ff948d77053693f8" />
+<SearchBar />
+<FetchAllProductsButton />
+<Sidebar />
+<Favorite/>
+
+</div>
+
+  );
+}
+
+export function Favorite() {
   const [isFavorite, setIsFavorite] = useState(false);
 
   const handleClick = async () => {
@@ -25,21 +42,17 @@ export function Luana() {
 
   return (
     <div className="favorite-button-wrapper">
-     { <button onClick={handleClick} className="favorite-button">
+      <button onClick={handleClick} className="favorite-button">
         {isFavorite ? "Favorited" : "❤️"}
-      </button>}
+      </button>
 
-      <div className="formata">
-        <AddToOutfitButton productId="647da6d2ff948d77053693f8" />
-        <RemoveToOutfitButton productId="647da6d2ff948d77053693f8" />
-        <SearchBar />
-        <FetchAllProductsButton />
-        <Sidebar />
-
-      </div>
+     
     </div>
   );
 }
+
+
+
 
 export function AddToOutfitButton(productId) {
   const [message, setMessage] = useState("");
@@ -117,10 +130,10 @@ export const SearchBar = () => {
       const response = await fetch(`/api/products/search?q=${searchTerm}`, {
         method: "GET",
       });
-     
+      console.log(response.json());
       if (response.ok) {
         const data = await response.json();
-        console.log(data)
+        
         return data
 
         

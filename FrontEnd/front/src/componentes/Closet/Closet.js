@@ -9,6 +9,28 @@ import whatsapplogo from '../imagens/whatsapplogo.png'
 import { Link } from "react-router-dom";
 
 function Closet() {
+    // useSate para gaurdar o array dos favorites
+    // useEffect para  carregar automaticamnete a pagina
+    // useEffect  vai fazer o fecth no useState e fazer o SetstateStatus do resultado do Fetch 
+
+    // mapar o elemento do state e aceder a imagem do produto.
+
+    /*  app.get("/api/favorite", async (req, res) => {
+  try {
+    const product = await getFavorite();
+    // Check if product exists
+    if (product) {
+      return res.json(product);
+    } else {
+      return res.status(404).json({ message: "not_found" });
+    }
+  } catch (err) {
+    console.log(err);
+  }
+}); */
+
+
+
     return (
         <div className="header_closet">
             <div className="titulo_closet">

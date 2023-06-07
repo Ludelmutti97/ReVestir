@@ -1,44 +1,37 @@
 import React, { useEffect, useState } from "react";
-import "./SingleProduto.css"
-import logorevestir from '../imagens/logorevestir.png';
-import Footer from '../Rodape/Rodape';
-
+import "./SingleProduto.css";
+//import { Luana } from "./componentes/luana/luana";
+import logorevestir from "../imagens/logorevestir.png";
+import Footer from "../Rodape/Rodape";
 
 
 function SingleProduct() {
-
-  const [state, setState] = useState([])
+  const [state, setState] = useState([]);
   useEffect(() => {
-    const options = { method: "GET", headers: { 'Accepts': 'application/json' } };
+    const options = { method: "GET", headers: { Accepts: "application/json" } };
 
     async function fetchSingle() {
       console.log("Single...");
-      const res = await fetch("/api/products/:_id", options)
+      const res = await fetch(`/api/products/:id}`, options);
       if (res.status === 200) {
-        console.log("Product")
+        console.log("Product");
         const body = await res.json();
-        console.log(body)
-        setState(body)
+        console.log(body);
+
+        setState(body);
         //Guardar body no state
       }
     }
-   
-    fetchSingle()
-  }, []);
 
+    fetchSingle();
+  }, []);
 
   return (
     <>
-
-
-
-    
       <div className="container">
         <header className="navbar">
           <div className="logo">
-          <img src={logorevestir} alt="ReVestir" height="200" width="200" />
-            
-            
+            <img src={logorevestir} alt="ReVestir" height="200" width="200" />
           </div>
           <nav>
             <ul id="MenuItems">
@@ -51,7 +44,6 @@ function SingleProduct() {
               <li>
                 <a href="/About">About</a>
               </li>
-             
             </ul>
           </nav>
         </header>
@@ -59,32 +51,25 @@ function SingleProduct() {
 
       {/*  Carrosel */}
 
-      
-
       <div className="small-container single-product">
         <div className="row">
-        
           <div className="col-2">
-
             <img
               src="https://cdn.shopify.com/s/files/1/0051/4447/7770/products/Fleece_Jacket_Beige_1_cc3f53b7-fefe-420b-9f48-76f88f3d181c.webp?v=1666949684&width=990"
               alt=""
               width="100%"
-              
             />
 
-
             <div className="small-img-row">
-
               <div className="small-img-col">
                 <img
-                  src="https://cdn.shopify.com/s/files/1/0051/4447/7770/products/Fleece_Jacket_Beige_1_cc3f53b7-fefe-420b-9f48-76f88f3d181c.webp?v=1666949684&width=990" 
+                  src="https://cdn.shopify.com/s/files/1/0051/4447/7770/products/Fleece_Jacket_Beige_1_cc3f53b7-fefe-420b-9f48-76f88f3d181c.webp?v=1666949684&width=990"
                   alt=""
                   width="100%"
                   className="small-img"
                 />
               </div>
-              
+
               <div className="small-img-col">
                 <img
                   src="https://cdn.shopify.com/s/files/1/0051/4447/7770/products/Fleece_Jacket_Beige_5_40a9448f-f350-4e1c-99ae-6e70a3f88b27.webp?v=1685702706&width=990"
@@ -109,50 +94,37 @@ function SingleProduct() {
                   className="small-img"
                 />
               </div>
-            </div> 
-           
-          </div> 
-          
-         
-          {
-            state.map(p => (
-          <div className="col-2">
-            <p>Home / Coat</p>
-            <h1>{p.nome}</h1>
+            </div>
+          </div>
 
-            <h2>Cor:</h2>
-            <p>{p.cor}</p>
-            <br />
-            <h2> Material:</h2> <p>{p.material}</p>
-            <br />
-            <h3>
-              Descrição <i className="fa fa-ident"></i>
-            </h3>
-            <p>
-              {p.descrição}
-            </p>
-            <br />
-
-            Onde Comprar<a >
-                  {p.onde_comprar}
-                </a>
-                <br />
-             {/*<button onClick={handleClick} className="favorite-button">
+          {state.map((p) => (
+            <div className="col-2">
+              <p>Home / Coat</p>
+              <h1>{p.nome}</h1>
+              <h2>Cor:</h2>
+              <p>{p.cor}</p>
+              <br />
+              <h2> Material:</h2> <p>{p.material}</p>
+              <br />
+              <h3>
+                Descrição <i className="fa fa-ident"></i>
+              </h3>
+              <p>{p.descrição}</p>
+              <br />
+              Onde Comprar<a>{p.onde_comprar}</a>
+              <br />
+              {/*<button onClick={handleClick} className="favorite-button">
           {isFavorite ? "Favorited" : "❤️"}
             </button>*/}
-
-           
-          </div>
+            </div>
           ))}
         </div>
       </div>
-    
 
       {/* title */}
       <div className="small-container">
         <div className="row row-2">
           <h2>Related Product</h2>
-       
         </div>
       </div>
 
@@ -218,14 +190,10 @@ function SingleProduct() {
         </div>
       </div>
 
-     
       <div className="footer">
-       <Footer/>
+        <Footer />
       </div>
-
-      
     </>
-    
   );
 }
 
