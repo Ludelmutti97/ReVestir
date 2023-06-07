@@ -3,7 +3,7 @@ import { Favorite } from "../luana/luana";
 import "./SingleProduto2.css";
 import logorevestir from "../imagens/logorevestir.png";
 
-import Footer from "../Rodape/Rodape";
+import Footer from "../rodape/rodape";
 
 function SingleProductTwo() {
   return (

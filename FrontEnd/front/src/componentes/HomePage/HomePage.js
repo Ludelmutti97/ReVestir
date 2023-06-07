@@ -7,10 +7,10 @@ import sapatilhas from "../imagens/sapatilhas.png";
 import scrolldown from "../imagens/scrolldown.png";
 import usericon from "../imagens/usericon.png";
 import hoodie from "../imagens/hoodie.png";
-//  import Footer from "../rodape/rodape";
+import Footer from "../rodape/rodape";
 import { v4 as uuidv4 } from "uuid";
-import Footer from "../Rodape/Rodape";
-import SearchBar from "../BarradePesquisa/BarraDePesquisa";
+// import Footer from "../Rodape/Rodape";
+import SearchBar from "../BarradePesquisa/BarraDePesquisa.js";
 
 import Carrousel from '../Carrousel/CarroselHome'
 import { Link } from 'react-router-dom';

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./SingleProduto.css";
 //import { Luana } from "./componentes/luana/luana";
 import logorevestir from "../imagens/logorevestir.png";
-import Footer from "../Rodape/Rodape";
+import Footer from "../rodape/rodape";
 
 
 function SingleProduct() {

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./AllProdutos.css";
 import logorevestir from "../imagens/logorevestir.png";
-import Footer from '../Rodape/Rodape';
+import Footer from '../rodape/rodape';
 
 
 function AllProducts() {
