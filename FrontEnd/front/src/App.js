@@ -4,7 +4,7 @@ import HomePage from "./componentes/HomePage/HomePage";
 import Produtos from "./componentes/AllProdutos/Produtos";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Closet from "./componentes/Closet/Closet"
-
+import ProductPage from "./componentes/sidebar/sideBar"
 
 //import Carousel from "./componentes/carrosel/Carousel";
 //import Footer from "./componentes/rodape/Rodape"
@@ -23,6 +23,7 @@ function App() {
         <Route exact path="/" element={<HomePage/>} />
         <Route path="/produtos" element={<Produtos/>} />
         <Route path="/Closet" element={<Closet/>} />
+        <Route path="/ProductID" element={<ProductPage/>} />
 
 
         <Route path="/luana" element={<Luana/>} />

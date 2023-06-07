@@ -1,36 +1,43 @@
-
-import React from "react";
-import sapatilhas from '../imagens/sapatilhas.png';
+import React, { useState } from "react";
+import hoodie from '../imagens/hoodie.png';
 import camiseta from '../imagens/camiseta.png';
-import calcas from '../imagens/calcas.png';
+import "../sidebar/sidebar.css"
 
 const ProductPage = () => {
-  const images = [
-  <div>
-    <img src={sapatilhas} alt="sapatilhas" height="130" />,
-    
-    <img src={camiseta} alt="camisola" height="250" />
+  const [activeIndex, setActiveIndex] = useState(0);
+  const images = [hoodie, camiseta, hoodie];
 
-    <img src={calcas} alt="calcas" height="300" />
-    </div>
-  ];
+  const handleClick = (index) => {
+    setActiveIndex(index);
+  };
 
   return (
-    <div>
-      <h1>Crossbody Pouch</h1>
-      <div className="image-gallery">
-        {images.map((image, index) => (
-          <img key={index} src={image} alt={`Image ${index}`} />
-        ))}
+    <div className="product-page">
+      <div className="carousel">
+        <div className="carousel-thumbnails">
+          {images.map((image, index) => (
+            <img
+              key={index}
+              src={image}
+              alt={`Image ${index}`}
+              className={activeIndex === index ? "active" : ""}
+              onClick={() => handleClick(index)}
+            />
+          ))}
+        </div>
+        <div className="carousel-main">
+          <img src={images[activeIndex]} alt={`Image ${activeIndex}`} />
+        </div>
       </div>
-      <p>Product description goes here...</p>
-      <button>Add to Cart</button>
+      <div className="product-details">
+        <h2>Nome do Produto</h2>
+        <p>Cor: Azul</p>
+        <p>Tipo de Material: Algodão</p>
+        <p>Descrição: Esta é uma descrição do produto.</p>
+        <button className="favorite-button">❤️</button>
+      </div>
     </div>
   );
 };
 
 export default ProductPage;
-
-
-
-<div tabindex="0" class="gallery-cell product-gallery__thumbnail" data-title="Crossbody Pouch" data-image-id="7336195588167"> <img src="//cdn.shopify.com/s/files/1/0218/2758/products/corkor-vegan-crossbody-pouch-light-brown-vertical-15063972315207_300x.jpg?v=1598448134" alt="Crossbody Pouch"></div>
