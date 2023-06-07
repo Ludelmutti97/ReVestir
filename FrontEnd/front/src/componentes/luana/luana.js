@@ -25,9 +25,9 @@ export function Luana() {
 
   return (
     <div className="favorite-button-wrapper">
-      <button onClick={handleClick} className="favorite-button">
+     { <button onClick={handleClick} className="favorite-button">
         {isFavorite ? "Favorited" : "❤️"}
-      </button>
+      </button>}
 
       <div className="formata">
         <AddToOutfitButton productId="647da6d2ff948d77053693f8" />

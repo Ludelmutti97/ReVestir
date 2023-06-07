@@ -2,13 +2,10 @@ import React, { Component } from "react";
 import Carousel from "react-spring-3d-carousel";
 import { v4 as uuidv4 } from 'uuid';
 import { config } from "react-spring";
-<<<<<<< HEAD:FrontEnd/front/src/componentes/carrosel/Roupa/Carrousel/CarroselHome.js
 import  "./CarroselHome.css";
 
-=======
-import { styles } from "./CarroselHome.css";
 import Roupa6 from "../Roupa/roupa6.jpeg"
->>>>>>> 7ba74c11cd7a0a700452261342a1b1aff6e8f745:FrontEnd/front/src/componentes/Carrousel/CarroselHome.js
+
 export default class Carrousel extends Component {
     state = {
         goToSlide: 0,

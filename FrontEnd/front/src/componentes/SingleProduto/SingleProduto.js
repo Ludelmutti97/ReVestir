@@ -1,45 +1,76 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./SingleProduto.css"
 import logorevestir from '../imagens/logorevestir.png';
-import instagramlogo from '../imagens/instagramlogo.png'
-import facebooklogo from '../imagens/facebooklogo.png'
-import whatsapplogo from '../imagens/whatsapplogo.png'
+import Footer from '../Rodape/Rodape';
+
 
 
 function SingleProduct() {
+
+  const [state, setState] = useState([])
+  useEffect(() => {
+    const options = { method: "GET", headers: { 'Accepts': 'application/json' } };
+
+    async function fetchSingle() {
+      console.log("Single...");
+      const res = await fetch("/api/products/:_id", options)
+      if (res.status === 200) {
+        console.log("Product")
+        const body = await res.json();
+        console.log(body)
+        setState(body)
+        //Guardar body no state
+      }
+    }
+   
+    fetchSingle()
+  }, []);
+
+
   return (
     <>
-      <header className="navbar">
-        <div className="logo">
-          <a href="">
-          <img src={logorevestir} alt="logo" height="200" width="200" />
 
-          </a>
-        </div>
-        <nav>
-          <ul id="MenuItems">
-            <li>
-              <a href="index.html">Home</a>
-            </li>
-            <li>
-              <a href="/produtos">Products</a>
-            </li>
-            <li>
-              <a href="About.js">About</a>
-            </li>
-          </ul>
-        </nav>
-      </header>
 
-      {/* single product details */}
+
+    
+      <div className="container">
+        <header className="navbar">
+          <div className="logo">
+          <img src={logorevestir} alt="ReVestir" height="200" width="200" />
+            
+            
+          </div>
+          <nav>
+            <ul id="MenuItems">
+              <li>
+                <a href="/">Home</a>
+              </li>
+              <li>
+                <a href="/produtos">Products</a>
+              </li>
+              <li>
+                <a href="/About">About</a>
+              </li>
+             
+            </ul>
+          </nav>
+        </header>
+      </div>
+
+      {/*  Carrosel */}
+
+      
+
       <div className="small-container single-product">
         <div className="row">
+        
           <div className="col-2">
+
             <img
               src="https://cdn.shopify.com/s/files/1/0051/4447/7770/products/Fleece_Jacket_Beige_1_cc3f53b7-fefe-420b-9f48-76f88f3d181c.webp?v=1666949684&width=990"
               alt=""
               width="100%"
-              id="ProductImg"
+              
             />
 
 
@@ -78,39 +109,44 @@ function SingleProduct() {
                   className="small-img"
                 />
               </div>
-
-              
-
-
-
-
-            </div>
-          </div>
+            </div> 
+           
+          </div> 
+          
+         
+          {
+            state.map(p => (
           <div className="col-2">
             <p>Home / Coat</p>
-            <h1>CASACO DE LÃ</h1>
+            <h1>{p.nome}</h1>
 
-            <h2>Color:</h2>
-            <p>Bege</p>
+            <h2>Cor:</h2>
+            <p>{p.cor}</p>
             <br />
-            <h2> Material:</h2> <p>100% Algodão Ecologico</p>
+            <h2> Material:</h2> <p>{p.material}</p>
             <br />
             <h3>
-              Product Details <i className="fa fa-ident"></i>
+              Descrição <i className="fa fa-ident"></i>
             </h3>
             <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione
-              culpa aperiam at minima reprehenderit dolorum accusamus sint autem.
-              Pariatur aliquam in nesciunt! Esse commodi a sed. Nam voluptatibus
-              earum error!
+              {p.descrição}
             </p>
             <br />
-            <button type="button" width="125">
-              ❤️
-            </button>
+
+            Onde Comprar<a >
+                  {p.onde_comprar}
+                </a>
+                <br />
+             {/*<button onClick={handleClick} className="favorite-button">
+          {isFavorite ? "Favorited" : "❤️"}
+            </button>*/}
+
+           
           </div>
+          ))}
         </div>
       </div>
+    
 
       {/* title */}
       <div className="small-container">
@@ -182,41 +218,12 @@ function SingleProduct() {
         </div>
       </div>
 
-      {/* footer */}
+     
       <div className="footer">
-        <div className="container">
-          <div className="row">
-            <div className="footer-col-2">
-            
-              <p>
-                Descubra a nossa página dedicada à moda sustentável, onde você
-                encontrará dicas de estilo consciente, marcas ecológicas e
-                iniciativas inovadoras. Junte-se a nós nessa jornada rumo a um
-                futuro fashion mais responsável e ético. Seja uma referência de
-                segurança e consciência ambiental!
-              </p>
-            </div>
-
-            <div className="footer-col-4">
-              <h3>Follow us</h3>
-              <ul>
-              <img src={instagramlogo} alt="camisola" height="40" />
-
-              <img src={facebooklogo} alt="camisola" height="40" />
-
-              <img src={whatsapplogo} alt="camisola" height="40" />
-              </ul>
-            </div>
-          </div>
-          <hr />
-          <p className="copyright">
-            Copyright 2021 - ReVestir
-          </p>
-        </div>
+       <Footer/>
       </div>
 
-      {/* main js */}
-      <script src="assets/js/main.js"></script>
+      
     </>
     
   );

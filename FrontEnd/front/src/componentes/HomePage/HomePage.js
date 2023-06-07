@@ -7,8 +7,8 @@ import sapatilhas from '../imagens/sapatilhas.png';
 import scrolldown from '../imagens/scrolldown.png';
 import usericon from '../imagens/usericon.png';
 import hoodie from '../imagens/hoodie.png';
-import Footer from '../rodape/rodape';
-import SearchBar from '../barradePesquisa/BarraDePesquisa'
+import Footer from '../Rodape/Rodape';
+import SearchBar from '../BarradePesquisa/BarraDePesquisa'
 
 import Carrousel from '../Carrousel/CarroselHome'
 import { Link } from 'react-router-dom';
