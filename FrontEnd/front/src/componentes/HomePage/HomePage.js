@@ -12,7 +12,7 @@ import SearchBar from '../barradePesquisa/barraDePesquisa'
 import { v4 as uuidv4 } from 'uuid';
 import Carrousel from '../Carrousel/CarroselHome'
 import { Link } from 'react-router-dom';
-import vestido from '../imagens/vestido.png';
+
 
 
 const tshirtsArray = [
@@ -42,6 +42,33 @@ const tshirtsArray = [
   }
 ];
 
+const camisolasArray = [
+  {
+    key: uuidv4(),
+    content: <img className="caixaCorrousel" src="imagens/RoupaDoSite/hoodie1.png" alt="7" />
+  },
+  {
+    key: uuidv4(),
+    content: <img className="caixaCorrousel" src="imagens/RoupaDoSite/hoodie2.png" alt="2" />
+  },
+  {
+    key: uuidv4(),
+    content: <img className="caixaCorrousel" src="imagens/RoupaDoSite/hoodie3.png" alt="3" />
+  },
+  {
+    key: uuidv4(),
+    content: <img className="caixaCorrousel" src="imagens/RoupaDoSite/hoodie4.png" alt="4" />
+  },
+  {
+    key: uuidv4(),
+    content: <img className="caixaCorrousel" src="imagens/RoupaDoSite/hoodie5.png" alt="5" />
+  },
+  {
+    key: uuidv4(),
+    content: <img className="caixaCorrousel" src="imagens/RoupaDoSite/hoodie6.png" alt="6" />
+  }
+];
+
 const calcassArray = [
   {
     key: uuidv4(),
@@ -66,6 +93,33 @@ const calcassArray = [
   {
     key: uuidv4(),
     content: <img className="caixaCorrousel" src="imagens/RoupaDoSite/calcas6.png" alt="6" />
+  }
+];
+
+const sapatilhasArray = [
+  {
+    key: uuidv4(),
+    content: <img className="caixaCorrousel" src="imagens/RoupaDoSite/sapatilhas1.png" alt="7" />
+  },
+  {
+    key: uuidv4(),
+    content: <img className="caixaCorrousel" src="imagens/RoupaDoSite/sapatilhas2.png" alt="2" />
+  },
+  {
+    key: uuidv4(),
+    content: <img className="caixaCorrousel" src="imagens/RoupaDoSite/sapatilhas3.png" alt="3" />
+  },
+  {
+    key: uuidv4(),
+    content: <img className="caixaCorrousel" src="imagens/RoupaDoSite/sapatilhas4.png" alt="4" />
+  },
+  {
+    key: uuidv4(),
+    content: <img className="caixaCorrousel" src="imagens/RoupaDoSite/sapatilhas5.png" alt="5" />
+  },
+  {
+    key: uuidv4(),
+    content: <img className="caixaCorrousel" src="imagens/RoupaDoSite/sapatilhas6.png" alt="6" />
   }
 ];
 
@@ -99,7 +153,6 @@ function HomePage() {
           <img src={calcas} alt="calcas" height="225" />
           <img src={hoodie} alt="hoodie" height="250" />
           <img src={sapatilhas} alt="sapatilhas" height="200" />
-          <img src={vestido} alt="vestido" height="300" width={300} />
         </div>
       </div>
       <div className="div3">
@@ -114,19 +167,15 @@ function HomePage() {
         </div>
         <div className='caixaHomePage'>
           <h1 className='Titulos'>Camisolas</h1>
-          <Carrousel items={tshirtsArray} />
+          <Carrousel items={camisolasArray} />
         </div>
         <div className='caixaHomePage'>
           <h1 className='Titulos'>Calças</h1>
           <Carrousel items={calcassArray} />
         </div>
         <div className='caixaHomePage'>
-          <h1 className='Titulos'>Vestidos</h1>
-          <Carrousel items={tshirtsArray} />
-        </div>
-        <div className='caixaHomePage'>
           <h1 className='Titulos'>Sapatilhas</h1>
-          <Carrousel items={tshirtsArray} />
+          <Carrousel items={sapatilhasArray} />
         </div>
 
         <div>
