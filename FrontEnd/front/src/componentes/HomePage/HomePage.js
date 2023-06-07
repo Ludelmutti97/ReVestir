@@ -8,13 +8,8 @@ import scrolldown from '../imagens/scrolldown.png';
 import usericon from '../imagens/usericon.png';
 import hoodie from '../imagens/hoodie.png';
 import Footer from '../rodape/rodape';
-
 import SearchBar from '../barradePesquisa/barraDePesquisa'
-
-
-
 import { v4 as uuidv4 } from 'uuid';
-
 import Carrousel from '../Carrousel/CarroselHome'
 import { Link } from 'react-router-dom';
 import vestido from '../imagens/vestido.png';
@@ -39,19 +34,11 @@ const tshirtsArray = [
   },
   {
     key: uuidv4(),
-    content: <img className="caixaCorrousel" src="imagens/RoupaDoSite/tshirt1.png" alt="5" />
+    content: <img className="caixaCorrousel" src="imagens/RoupaDoSite/tshirt5.png" alt="5" />
   },
   {
     key: uuidv4(),
-    content: <img className="caixaCorrousel" src="imagens/RoupaDoSite/tshirt1.png" alt="6" />
-  },
-  {
-    key: uuidv4(),
-    content: <img className="caixaCorrousel" src="imagens/RoupaDoSite/tshirt1.png" alt="7" />
-  },
-  {
-    key: uuidv4(),
-    content: <img className="caixaCorrousel" src="imagens/RoupaDoSite/tshirt1.png" alt="8" />
+    content: <img className="caixaCorrousel" src="imagens/RoupaDoSite/tshirt6.png" alt="6" />
   }
 ];
 
@@ -79,14 +66,6 @@ const calcassArray = [
   {
     key: uuidv4(),
     content: <img className="caixaCorrousel" src="imagens/RoupaDoSite/calcas6.png" alt="6" />
-  },
-  {
-    key: uuidv4(),
-    content: <img className="caixaCorrousel" src="imagens/RoupaDoSite/calcas2.png" alt="7" />
-  },
-  {
-    key: uuidv4(),
-    content: <img className="caixaCorrousel" src="imagens/RoupaDoSite/calcas3.png" alt="8" />
   }
 ];
 
