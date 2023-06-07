@@ -9,11 +9,28 @@ import usericon from '../imagens/usericon.png';
 import hoodie from '../imagens/hoodie.png';
 import Footer from '../rodape/rodape';
 import SearchBar from '../barradePesquisa/BarraDePesquisa'
-
+import { v4 as uuidv4 } from 'uuid';
 import Carrousel from '../Carrousel/CarroselHome'
 import { Link } from 'react-router-dom';
 import vestido from '../imagens/vestido.png';
 
+import tshirt1 from "../imagens/RoupaDoSite/tshirt1.png"
+import tshirt2 from "../imagens/RoupaDoSite/tshirt2.png"
+import tshirt3 from "../imagens/RoupaDoSite/tshirt3.png"
+import tshirt4 from "../imagens/RoupaDoSite/tshirt4.png"
+import tshirt5 from "../imagens/RoupaDoSite/tshirt5.png"
+
+const tshirt = [tshirt1, tshirt2, tshirt3, tshirt4, tshirt5]
+[
+  {
+    key: uuidv4(),
+    content: <img className="caixaCorrousel" src="../imagens/RoupaDoSite/tshirt1.png" alt="7" />
+  },
+  {
+    key: uuidv4(),
+    content: <img className="caixaCorrousel" src="./imagens/RoupaDoSite/tshirt2.png" alt="8" />,
+  }
+];
 
 
 function HomePage() {
@@ -55,7 +72,7 @@ function HomePage() {
         </div>
         <div className='caixaHomePage'>
           <h1 className='Titulos'>T-Sthirts</h1>
-          <Carrousel />
+          <Carrousel items={tshirt} />
         </div>
         <div className='caixaHomePage'>
           <h1 className='Titulos'>Camisolas</h1>
