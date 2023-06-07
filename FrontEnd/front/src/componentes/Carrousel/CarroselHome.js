@@ -2,8 +2,13 @@ import React, { Component } from "react";
 import Carousel from "react-spring-3d-carousel";
 import { v4 as uuidv4 } from 'uuid';
 import { config } from "react-spring";
+<<<<<<< HEAD:FrontEnd/front/src/componentes/carrosel/Roupa/Carrousel/CarroselHome.js
 import  "./CarroselHome.css";
 
+=======
+import { styles } from "./CarroselHome.css";
+import Roupa6 from "../Roupa/roupa6.jpeg"
+>>>>>>> 7ba74c11cd7a0a700452261342a1b1aff6e8f745:FrontEnd/front/src/componentes/Carrousel/CarroselHome.js
 export default class Carrousel extends Component {
     state = {
         goToSlide: 0,
@@ -15,35 +20,35 @@ export default class Carrousel extends Component {
     slides = [
         {
             key: uuidv4(),
-            content: <img src="https://picsum.photos/800/801/?random" alt="1" />
+            content: <img className="caixaCorrousel" src={Roupa6} alt="1" width={600} height={803} />
         },
         {
             key: uuidv4(),
-            content: <img src="https://picsum.photos/800/802/?random" alt="2" />
+            content: <img className="caixaCorrousel" src="https://picsum.photos/800/802/?random" alt="2" />
         },
         {
             key: uuidv4(),
-            content: <img src="https://picsum.photos/600/803/?random" alt="3" />
+            content: <img className="caixaCorrousel" src="https://picsum.photos/600/803/?random" alt="3" />
         },
         {
             key: uuidv4(),
-            content: <img src="https://picsum.photos/800/500/?random" alt="4" />
+            content: <img className="caixaCorrousel" src="https://picsum.photos/800/500/?random" alt="4" />
         },
         {
             key: uuidv4(),
-            content: <img src="https://picsum.photos/800/804/?random" alt="5" />
+            content: <img className="caixaCorrousel" src="https://picsum.photos/800/804/?random" alt="5" />
         },
         {
             key: uuidv4(),
-            content: <img src="https://picsum.photos/500/800/?random" alt="6" />
+            content: <img className="caixaCorrousel" src="https://picsum.photos/500/800/?random" alt="6" />
         },
         {
             key: uuidv4(),
-            content: <img src="https://picsum.photos/800/600/?random" alt="7" />
+            content: <img className="caixaCorrousel" src="https://picsum.photos/800/600/?random" alt="7" />
         },
         {
             key: uuidv4(),
-            content: <img src="https://picsum.photos/805/800/?random" alt="8" />
+            content: <img className="caixaCorrousel" src="https://picsum.photos/805/800/?random" alt="8" />
         }
     ];
 

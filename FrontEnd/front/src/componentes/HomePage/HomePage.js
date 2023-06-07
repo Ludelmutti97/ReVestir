@@ -10,7 +10,7 @@ import hoodie from '../imagens/hoodie.png';
 import Footer from '../rodape/rodape';
 import SearchBar from '../barradePesquisa/BarraDePesquisa'
 
-import Carrousel from '../carrosel/Roupa/Carrousel/CarroselHome'
+import Carrousel from '../Carrousel/CarroselHome'
 import { Link } from 'react-router-dom';
 import vestido from '../imagens/vestido.png';
 

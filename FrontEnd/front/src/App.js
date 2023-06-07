@@ -6,15 +6,12 @@ import Closet from "./componentes/Closet/Closet"
 import SingleProduct from "./componentes/SingleProduto/SingleProduto"
 import SingleProductTwo from "./componentes/SingleProduto/SingleProduto2"
 import About from "./componentes/AboutUs/About";
-
-//import Carousel from "./componentes/carrosel/Carousel";
-//import Footer from "./componentes/rodape/Rodape"
-//import TodosOsProdutos from "./TodosOsProdutos"
-
-
 import { Luana } from "./componentes/luana/luana";
 import Example from "./componentes/carrosel/Roupa/Carrousel/CarroselHome"
 import AllProducts from "./componentes/produtos/produtos";
+import Example from "./componentes/Carrousel/CarroselHome"
+import Produtos from "./componentes/produtos/produtos";
+import KeepMountedModal from "./componentes/PopUp/ProdutoHomePage"
 
 
 
@@ -31,9 +28,14 @@ function App() {
         <Route path="/carrosel1" element={<Example />} />
         <Route path="/Closet" element={<Closet />} />
         <Route path="/luana" element={<Luana />} />
+
         <Route path="/produtos" element={<AllProducts />} />
 
         
+
+
+        <Route path="/produtos" element={<Produtos />} />
+        <Route path="/produtohomepage" element={<KeepMountedModal />} />
 
 
 
