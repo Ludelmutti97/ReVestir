@@ -12,9 +12,10 @@ import { v4 as uuidv4 } from "uuid";
 import Footer from "../Rodape/Rodape";
 import SearchBar from "../BarradePesquisa/BarraDePesquisa";
 
-import Carrousel from "../Carrousel/CarroselHome";
-import { Link } from "react-router-dom";
-import vestido from "../imagens/vestido.png";
+import Carrousel from '../Carrousel/CarroselHome'
+import { Link } from 'react-router-dom';
+
+
 
 const tshirtsArray = [
   {
@@ -77,6 +78,33 @@ const tshirtsArray = [
       />
     ),
   },
+];
+
+const camisolasArray = [
+  {
+    key: uuidv4(),
+    content: <img className="caixaCorrousel" src="imagens/RoupaDoSite/hoodie1.png" alt="7" />
+  },
+  {
+    key: uuidv4(),
+    content: <img className="caixaCorrousel" src="imagens/RoupaDoSite/hoodie2.png" alt="2" />
+  },
+  {
+    key: uuidv4(),
+    content: <img className="caixaCorrousel" src="imagens/RoupaDoSite/hoodie3.png" alt="3" />
+  },
+  {
+    key: uuidv4(),
+    content: <img className="caixaCorrousel" src="imagens/RoupaDoSite/hoodie4.png" alt="4" />
+  },
+  {
+    key: uuidv4(),
+    content: <img className="caixaCorrousel" src="imagens/RoupaDoSite/hoodie5.png" alt="5" />
+  },
+  {
+    key: uuidv4(),
+    content: <img className="caixaCorrousel" src="imagens/RoupaDoSite/hoodie6.png" alt="6" />
+  }
 ];
 
 const calcassArray = [
@@ -142,6 +170,8 @@ const calcassArray = [
   },
 ];
 
+
+
 function HomePage() {
   const handleSearch = (searchTerm) => {
     // Aqui você pode fazer alguma lógica de busca com o termo fornecido
@@ -173,7 +203,6 @@ function HomePage() {
           <img src={calcas} alt="calcas" height="225" />
           <img src={hoodie} alt="hoodie" height="250" />
           <img src={sapatilhas} alt="sapatilhas" height="200" />
-          <img src={vestido} alt="vestido" height="300" width={300} />
         </div>
       </div>
       <div className="div3">
@@ -185,20 +214,20 @@ function HomePage() {
           <h1 className="Titulos">T-Sthirts</h1>
           <Carrousel items={tshirtsArray} />
         </div>
-        <div className="caixaHomePage">
-          <h1 className="Titulos">Camisolas</h1>
+        <div className='caixaHomePage'>
+          <h1 className='Titulos'>Camisolas</h1>
           <Carrousel items={tshirtsArray} />
         </div>
         <div className="caixaHomePage">
           <h1 className="Titulos">Calças</h1>
           <Carrousel items={calcassArray} />
         </div>
-        <div className="caixaHomePage">
-          <h1 className="Titulos">Vestidos</h1>
+        <div className='caixaHomePage'>
+          <h1 className='Titulos'>Vestidos</h1>
           <Carrousel items={tshirtsArray} />
         </div>
-        <div className="caixaHomePage">
-          <h1 className="Titulos">Sapatilhas</h1>
+        <div className='caixaHomePage'>
+          <h1 className='Titulos'>Sapatilhas</h1>
           <Carrousel items={tshirtsArray} />
         </div>
 
