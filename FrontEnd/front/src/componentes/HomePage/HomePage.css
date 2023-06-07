@@ -3,6 +3,7 @@
 }
 
 .header {
+
   display: flex;
   flex-direction: row;
  gap: 15%;
@@ -11,6 +12,7 @@
 
 
 .div1 {
+ 
   display: flex;
   justify-content: center;
   align-items: center;

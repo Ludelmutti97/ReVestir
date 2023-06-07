@@ -10,7 +10,7 @@ import { Luana } from "./componentes/luana/luana";
 // import Example from "./componentes/carrosel/Roupa/Carrousel/CarroselHome"
 // import Example from "./componentes/Carrousel/CarroselHome"
 import Produtos from "./componentes/produtos/produtos";
-import KeepMountedModal from "./componentes/PopUp/ProdutoHomePage"
+// import KeepMountedModal from "./componentes/PopUp/ProdutoHomePage"
 
 
 
@@ -28,7 +28,7 @@ function App() {
         <Route path="/Closet" element={<Closet />} />
         <Route path="/luana" element={<Luana />} />
         <Route path="/produtos" element={<Produtos />} />
-        <Route path="/produtohomepage" element={<KeepMountedModal />} />
+        {/* <Route path="/produtohomepage" element={<KeepMountedModal />} /> */}
 
 
 
