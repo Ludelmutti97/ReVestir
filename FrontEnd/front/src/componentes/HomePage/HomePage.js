@@ -8,9 +8,14 @@ import scrolldown from '../imagens/scrolldown.png';
 import usericon from '../imagens/usericon.png';
 import hoodie from '../imagens/hoodie.png';
 import Footer from '../rodape/rodape';
+<<<<<<< HEAD
+import SearchBar from '../barradePesquisa/barraDePesquisa'
+
+=======
 import SearchBar from '../barradePesquisa/BarraDePesquisa'
 import { v4 as uuidv4 } from 'uuid';
-import CarrouselBlock from '../Carrousel/CarroselHome'
+>>>>>>> 880b3aff20a831d2f87ffe2da71f0079ea2bd5c6
+import Carrousel from '../Carrousel/CarroselHome'
 import { Link } from 'react-router-dom';
 import vestido from '../imagens/vestido.png';
 

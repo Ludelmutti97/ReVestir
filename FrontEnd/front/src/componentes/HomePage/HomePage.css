@@ -1,12 +1,11 @@
-*{
+* {
   background-color: #cdf0c5;
 }
 
-.header {
-
+.header_closet {
   display: flex;
   flex-direction: row;
- gap: 15%;
+  gap: 15%;
 
 }
 
@@ -21,12 +20,13 @@
 }
 
 .footer {
- 
+
   display: flex;
   justify-content: left;
   align-items: flex-end;
   height: 20vh;
-  color: aliceblue;  /* Adicionado para posicionar no fundo da página */
+  color: aliceblue;
+  /* Adicionado para posicionar no fundo da página */
 }
 
 
@@ -43,8 +43,7 @@
   height: 20vh;
   /* Adicionado para posicionar no fundo da página */
   animation: bounce 1s infinite;
-  margin-bottom: 10%
-  ;
+  margin-bottom: 10%;
 }
 
 .usericon {
@@ -55,7 +54,7 @@
   ;
 }
 
-.prods{
+.prods {
   float: right;
   border: 5px;
   margin: 5px;
@@ -79,18 +78,20 @@
     transform: translateY(0);
   }
 }
-.caixaHomePage{
+
+.caixaHomePage {
 
   margin-top: 300px;
   justify-content: center;
   display: flex;
   flex-direction: column;
   align-items: center;
- 
+
 }
+
 .Titulos {
-  
-margin-bottom: 80px;
+
+  margin-bottom: 80px;
   align-items: center;
   width: fit-content;
   border-top: 5px solid #514540;
