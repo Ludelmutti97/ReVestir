@@ -1,31 +1,42 @@
-.titulo {
-    border-bottom: 5px solid #514540;
+.titulo_closet {
     text-align: center;
+    margin-top: 1%;
+
+}
+
+.header_closet {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.titulobody_closet {
+    color: rgb(255, 255, 255);
+    font-size: 35px;
+    text-align: center;
+    margin-top: 5%;
+}
+
+.barra_closet{
+    border: 3px solid black;
+    margin-top: 1%;
+}
+.returnicon {
+    position: absolute;
+    left: 60px;
+    top: 46px;
+}
+
+.closeticon {
+
+    align-items: center;
     margin-top: 2%;
 
 }
 
-.titulobody {
-    color: rgb(255, 255, 255);
-    font-size: 35px;
-    text-align: center;
-    margin: 4%;
-}
-
-
-.returnicon {
-    position: absolute;
-    left: 60px;
-    top: 32px;
-}
-
-.closeticon {
-    margin-bottom: 20px;
-}
-
 .icons img {
-    margin: 1% 5px;
-    align-items: center;
+    margin: 1% 6px;
+
 }
 
 .outfit1 {
@@ -50,6 +61,7 @@
 
 .outfit1 span {
     background-color: transparent;
+;
 }
 
 .outfit3 {
@@ -76,9 +88,20 @@
     color: black;
     font-weight: bold;
     font-size: 20px;
+    text-align: center;
 }
 
-.icons {
-    text-align: right;
-    margin-right: 6%;
+
+
+.icons{
+    align-items: right;
+    margin-left: 87%;
+}
+
+.caixas{
+    text-align: center;
+    font-weight: bold;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: normal;
+    line-height: 40px;
 }

@@ -10,15 +10,17 @@ import { Link } from "react-router-dom";
 
 function Closet() {
     return (
-        <div className="header">
-            <div className="titulo">
+        <div className="header_closet">
+            <div className="titulo_closet">
                 <Link to="/">
                 <img className="returnicon" src={returnicon} alt="usericon" height="65" />
                 </Link>
                 <img className="closeticon" src={closet} alt="closet" height="70" />
+                
             </div>
+            <div className="barra_closet"></div>
             <div>
-                <p className="titulobody">Your Favorites<img className="coracaoicon" src={coracaoicon} alt="closet" height="30" /></p>
+                <p className="titulobody_closet">Os seus favoritos<img className="coracaoicon" src={coracaoicon} alt="closet" height="30" /></p>
             </div>
             <div className="pecasfavoritas">
 
@@ -38,7 +40,6 @@ function Closet() {
                 <img src={instagramlogo} alt="camisola" height="30" />
                 <img src={facebooklogo} alt="camisola" height="30" />
                 <img src={whatsapplogo} alt="camisola" height="30" />
-
             </div>
         </div>
 

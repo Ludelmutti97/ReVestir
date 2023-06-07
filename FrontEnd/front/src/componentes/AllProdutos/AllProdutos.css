@@ -15,7 +15,7 @@ ul {
 }
 
 /*--------- header ---------*/
-.header {
+.header_produtos {
     background: radial-gradient(#fff, #ffd6d6);
 }
 
@@ -108,7 +108,7 @@ p {
     background: #563434;
 }
 
-.header .row {
+.headerProdutosrow .row {
     margin-top: 70px;
 }
 
