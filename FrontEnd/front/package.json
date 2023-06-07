@@ -7,6 +7,7 @@
     "@emotion/styled": "^11.11.0",
     "@mui/material": "^5.13.4",
     "@mui/styled-engine-sc": "^5.12.0",
+    "@splidejs/react-splide": "^0.7.12",
     "@splidejs/splide": "^4.1.4",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -53,5 +54,4 @@
   },
   "devDependencies": {
     "file-loader": "^6.2.0"
-  }
-}
+  },"proxy": "http://localhost:3030"}

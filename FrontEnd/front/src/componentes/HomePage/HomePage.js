@@ -10,6 +10,9 @@ import hoodie from '../imagens/hoodie.png';
 import Footer from '../rodape/rodape';
 import SearchBar from '../barradePesquisa/barraDePesquisa'
 import { v4 as uuidv4 } from 'uuid';
+import Footer from '../Rodape/Rodape';
+import SearchBar from '../BarradePesquisa/BarraDePesquisa'
+
 import Carrousel from '../Carrousel/CarroselHome'
 import { Link } from 'react-router-dom';
 

@@ -1,9 +1,11 @@
 import React from 'react';
 import './SingleProduto2.css';
 import logorevestir from '../imagens/logorevestir.png';
-import instagramlogo from '../imagens/instagramlogo.png'
-import facebooklogo from '../imagens/facebooklogo.png'
-import whatsapplogo from '../imagens/whatsapplogo.png'
+
+import Footer from '../Rodape/Rodape';
+{/*import Splide from '@splidejs/splide';
+
+new Splide( '.splide' ).mount();*/}
 
 
 function SingleProductTwo() {
@@ -167,33 +169,7 @@ function SingleProductTwo() {
       </div>
 
       <div class="footer">
-        <div class="container">
-            <div class="row">
-               
-                <div class="footer-col-2">
-                    
-                    <p> Descubra a nossa página dedicada à moda sustentável, onde você
-                encontrará dicas de estilo consciente, marcas ecológicas e
-                iniciativas inovadoras. Junte-se a nós nessa jornada rumo a um
-                futuro fashion mais responsável e ético. Seja uma referência de
-                segurança e consciência ambiental!</p>
-                </div>
-              
-                <div class="footer-col-4">
-                    <h3>Follow us</h3>
-                    <ul>
-                    <img src={instagramlogo} alt="camisola" height="40" />
-
-                    <img src={facebooklogo} alt="camisola" height="40" />
-
-                    <img src={whatsapplogo} alt="camisola" height="40" />
-                        
-                    </ul>
-                </div>
-            </div>
-            <hr/>
-            <p class="copyright">Copyright 2021 - ReVestir</p>
-        </div>
+        <Footer/>
     </div>
 
     </>

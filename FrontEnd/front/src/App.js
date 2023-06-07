@@ -7,10 +7,11 @@ import SingleProduct from "./componentes/SingleProduto/SingleProduto"
 import SingleProductTwo from "./componentes/SingleProduto/SingleProduto2"
 import About from "./componentes/AboutUs/About";
 import { Luana } from "./componentes/luana/luana";
-// import Example from "./componentes/carrosel/Roupa/Carrousel/CarroselHome"
-// import Example from "./componentes/Carrousel/CarroselHome"
-import Produtos from "./componentes/produtos/produtos";
-// import KeepMountedModal from "./componentes/PopUp/ProdutoHomePage"
+//import Example from "./componentes/carrosel/Roupa/Carrousel/CarroselHome"
+
+//import Example from "./componentes/Carrousel/CarroselHome"
+import Produtos from "./componentes/AllProdutos/AllProdutos";
+import KeepMountedModal from "./componentes/PopUp/ProdutoHomePage"
 
 
 
@@ -22,7 +23,7 @@ function App() {
 
         <Route exact path="/" element={<HomePage/>} />
         <Route path="/About" element={<About />} />
-        <Route path="/ProductID" element={<SingleProduct/>} />
+        <Route path="/id" element={<SingleProduct/>} />
         <Route path="/ProductID2" element={<SingleProductTwo/>} />
         {/* <Route path="/carrosel1" element={<Example />} /> */}
         <Route path="/Closet" element={<Closet />} />
@@ -31,7 +32,7 @@ function App() {
         {/* <Route path="/produtohomepage" element={<KeepMountedModal />} /> */}
 
 
-
+        
       </Routes>
     </Router>
 
