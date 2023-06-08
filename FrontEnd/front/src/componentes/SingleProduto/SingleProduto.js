@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "./SingleProduto.css";
-//import { Luana } from "./componentes/luana/luana";
+import { Favorite } from "../luana/luana";
 import logorevestir from "../imagens/logorevestir.png";
 import Footer from "../rodape/rodape";
+
 
 
 function SingleProduct() {
@@ -113,9 +114,7 @@ function SingleProduct() {
               <br />
               Onde Comprar<a>{p.onde_comprar}</a>
               <br />
-              {/*<button onClick={handleClick} className="favorite-button">
-          {isFavorite ? "Favorited" : "❤️"}
-            </button>*/}
+              <div> {<Favorite/>}</div>
             </div>
           ))}
         </div>
