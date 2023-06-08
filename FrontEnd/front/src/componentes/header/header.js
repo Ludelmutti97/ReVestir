@@ -2,11 +2,14 @@
 import React from 'react';
 import "./Header.css"
 import logorevestir from '../imagens/logorevestir.png';
-import Footer from '../Rodape/Rodape';
+import usericon from "../imagens/usericon.png";
+
+
 
 function Header() {
     return (
       <>
+      
       <div className="container">
       <header className="navbar">
         <div className="logo">
@@ -25,6 +28,14 @@ function Header() {
             <li>
               <a href="/About">About</a>
             </li>
+            <li>
+            <a href="/Closet">
+              <img className="usericon"
+              src={usericon}
+              alt="usericon"
+              />
+            </a>
+          </li>
           </ul>
         </nav>
       </header>
@@ -33,9 +44,7 @@ function Header() {
    
 
 
-    <div>
-        <Footer/>
-    </div>
+   
     </>
   
  )}

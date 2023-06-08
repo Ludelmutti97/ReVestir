@@ -1,4 +1,4 @@
-* {
+ *{
   background-color: #cdf0c5;
 }
 
@@ -19,22 +19,6 @@
   /* Adicionado para centralizar verticalmente */
 }
 
-.footer {
-
-  display: flex;
-  justify-content: left;
-  align-items: flex-end;
-  height: 20vh;
-  color: aliceblue;
-  /* Adicionado para posicionar no fundo da página */
-}
-
-
-.footer img {
-  margin: 1% 5px;
-  /* Ajuste os valores de margem conforme necessário */
-
-}
 
 .scrolldown {
   display: flex;
@@ -46,13 +30,54 @@
   margin-bottom: 10%;
 }
 
+.header_produtos {
+  background: radial-gradient(#fff, #ffd6d6);
+}
+
+.container {
+  max-width: 1300px;
+  margin: auto;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+nav {
+  flex: 1;
+  text-align: right;
+}
+
+nav ul {
+  display: inline-block;
+  list-style-type: none;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: #555;
+}
+
+p {
+  color: #555;
+}
+
 .usericon {
   float: right;
-  border: 5px;
-  margin: 50px;
-  padding: 5px;
-  ;
+  height: 30px
+
 }
+
+
 
 .prods {
   float: right;
@@ -86,6 +111,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  
 
 }
 
@@ -96,4 +122,13 @@
   width: fit-content;
   border-top: 5px solid #514540;
   border-bottom: 5px solid #BFA37E;
+}
+
+.App{
+
+  margin: 50px 50px 400px 50px
+}
+.App{
+
+  position: relative;
 }

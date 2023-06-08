@@ -1,4 +1,4 @@
-import React from "react";
+import React,{ useState } from "react";
 import "./HomePage.css";
 import camiseta from "../imagens/camiseta.png";
 import calcas from "../imagens/calcas.png";
@@ -7,14 +7,13 @@ import sapatilhas from "../imagens/sapatilhas.png";
 import scrolldown from "../imagens/scrolldown.png";
 import usericon from "../imagens/usericon.png";
 import hoodie from "../imagens/hoodie.png";
-import Footer from "../rodape/rodape";
 import { v4 as uuidv4 } from "uuid";
-// import Footer from "../Rodape/Rodape";
-import SearchBar from "../BarradePesquisa/BarraDePesquisa.js";
+import SearchBar from "../barradePesquisa/barraDePesquisa"
 import Carrousel from '../Carrousel/CarroselHome'
-import { Link } from 'react-router-dom';
 
-import { useState } from "react";
+import Footer from "../rodape/rodape"
+
+
 
 
 const tshirtsArray = [
@@ -217,7 +216,27 @@ function HomePage() {
           <p></p>
         )}
       
-          <Link to="/produtos">
+      <nav>
+          <ul id="MenuItems">
+            
+            <li>
+              <a href="/produtos">Products</a>
+            </li>
+            <li>
+              <a href="/About">About</a>
+            </li>
+            <li>
+            <a href="/Closet">
+              <img className="usericon"
+              src={usericon}
+              alt="usericon"
+              />
+            </a>
+          </li>
+          </ul>
+        </nav>
+      
+        {  /*<Link to="/produtos">
             <p className="prods">Produtos</p>
           </Link>
           <Link to="/closet">
@@ -227,7 +246,7 @@ function HomePage() {
               alt="usericon"
               height="50"
             />
-          </Link>
+          </Link> */}
         </header>
 
         <div className="div1">
@@ -262,10 +281,8 @@ function HomePage() {
           <h1 className='Titulos'>Sapatilhas</h1>
           <Carrousel items={tshirtsArray} />
         </div>
-
-        <div>
-          <Footer />
-        </div>
+        <Footer/>
+       
       </div>
     </div>
   );

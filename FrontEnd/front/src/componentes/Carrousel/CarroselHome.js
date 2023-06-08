@@ -1,6 +1,6 @@
-import React, { Component, useState } from "react";
+import React, {  useState } from "react";
 import Carousel from "react-spring-3d-carousel";
-import { v4 as uuidv4 } from 'uuid';
+//import { v4 as uuidv4 } from 'uuid';
 import { config } from "react-spring";
 import "./CarroselHome.css";
 

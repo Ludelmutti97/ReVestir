@@ -3,11 +3,10 @@ import "./Closet.css"
 import returnicon from "../imagens/returnicon.png"
 import closet from "../imagens/closet.png"
 import coracaoicon from "../imagens/coracaoicon.png"
-import instagramlogo from '../imagens/instagramlogo.png'
-import facebooklogo from '../imagens/facebooklogo.png'
-import whatsapplogo from '../imagens/whatsapplogo.png'
+
 import { Link } from "react-router-dom";
 import { RemoveToOutfitButton } from "../luana/luana";
+import Footer from "../rodape/rodape";
 
 
     // useSate para guardar o array dos favorites
@@ -76,13 +75,12 @@ function Closet  ()  {
          
       </div>
       </div>
-      <div className="icons">
-        <img src={instagramlogo} alt="camisola" height="30" />
-        <img src={facebooklogo} alt="camisola" height="30" />
-        <img src={whatsapplogo} alt="camisola" height="30" />
-      </div>
+      <div><Footer/></div>
     </div>
-  );
+
+    
+  )
+  
 }
 
 export default Closet

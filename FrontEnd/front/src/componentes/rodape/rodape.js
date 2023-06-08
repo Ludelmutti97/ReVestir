@@ -6,13 +6,14 @@ import whatsapplogo from "../imagens/whatsapplogo.png";
 
 function Footer() {
   return (
+
     <div class="footer">
       <div class="container">
         <div class="row">
           <div class="footer-col-2">
             <p>
               {" "}
-              Descubra a nossa página dedicada à moda sustentável, onde você
+              ReVestir  dedicada à moda sustentável, onde você
               encontrará dicas de estilo consciente, marcas ecológicas e
               iniciativas inovadoras. Junte-se a nós nessa jornada rumo a um
               futuro fashion mais responsável e ético. Seja uma referência de
@@ -22,20 +23,21 @@ function Footer() {
 
           <div class="footer-col-4">
             <h3>Follow us</h3>
-            <ul>
-              <img src={instagramlogo} alt="camisola" height="40" />
+            <br />
+            <ul className="img">
+              <img src={instagramlogo} alt="camisola" height="40" className="img"/>
 
-              <img src={facebooklogo} alt="camisola" height="40" />
+              <img src={facebooklogo} alt="camisola" height="40" className="img" />
 
-              <img src={whatsapplogo} alt="camisola" height="40" />
+              <img src={whatsapplogo} alt="camisola" height="40" className="img"/>
             </ul>
           </div>
-        </div>
+          </div>
         <hr />
-        <p class="copyright">Copyright 2021 - ReVestir</p>
-      </div>
+        <p class="copyright">Copyright 2023 - ReVestir</p>
+     </div>
     </div>
-  );
+  )
 }
 
 export default Footer;

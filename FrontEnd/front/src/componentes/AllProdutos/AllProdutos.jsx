@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "./AllProdutos.css";
-import logorevestir from "../imagens/logorevestir.png";
+
 import Footer from '../rodape/rodape';
+import Header from "../header/header";
 
 
 function AllProducts() {
@@ -24,38 +25,19 @@ function AllProducts() {
     }
 
     fetchData()
-  }, []);
+  }, );
 
   return (
     <>
 
-      <div className="produtos_container">
-        <header className="navbar">
-          <div className="logo">
-            <a href="index.html">
-              <img src={logorevestir} alt="logo" height="200" width="200" />
-            </a>
-          </div>
-          <nav>
-            <ul id="MenuItems">
-              <li>
-                <a href="/">Home</a>
-              </li>
-              <li>
-                <a href="/About">About</a>
-              </li>
-             
-            </ul>
-          </nav>
-          
-        </header>
-      </div>
+      <Header/>
+
       <div className="small-container">
         <div className="row row-2">
           <select>
             <option>Side bar</option>
           </select>
-          <h2>All Products</h2>
+          <h2  className="all">All Products</h2>
         </div>
         <div className="row">
           {
@@ -91,9 +73,9 @@ function AllProducts() {
         <span>&#8594;</span>
       </div>
 
-      <div class="footer">
+     
        <Footer/>
-      </div>
+      
 
     </>
   );

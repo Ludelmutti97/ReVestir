@@ -1,5 +1,5 @@
 
-import "./BarraDePesquisa.css"
+import "./barraDePesquisa.css"
 import React, { useState } from 'react';
 
 

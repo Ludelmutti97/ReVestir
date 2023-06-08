@@ -112,7 +112,8 @@ function SingleProduct() {
               </h3>
               <p>{p.descrição}</p>
               <br />
-              Onde Comprar<a>{p.onde_comprar}</a>
+              <h3>Onde Comprar</h3>
+              <p>{p.onde_comprar}</p>
               <br />
               <div> {<Favorite/>}</div>
             </div>

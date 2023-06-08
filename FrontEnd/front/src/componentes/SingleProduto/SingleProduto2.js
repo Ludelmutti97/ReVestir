@@ -165,9 +165,9 @@ function SingleProductTwo() {
         </div>
       </div>
 
-      <div class="footer">
+      
         <Footer />
-      </div>
+      
     </>
   );
 }
