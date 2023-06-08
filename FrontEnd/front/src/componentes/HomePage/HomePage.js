@@ -173,10 +173,24 @@ const calcassArray = [
 
 
 function HomePage() {
+  const [searchResults, setSearchResults] = useState([]);
+
   const handleSearch = (searchTerm) => {
-    // Aqui você pode fazer alguma lógica de busca com o termo fornecido
-    console.log("Buscando por:", searchTerm);
+    // Fazer a chamada ao backend
+    fetch(`/api/products/search?q=${searchTerm}`)
+      .then((response) => {
+        if (response.ok) {
+          return response.json();
+        } 
+      })
+      .then((data) => {
+        setSearchResults(data.produtos);
+      })
+      .catch((error) => {
+        console.log("Error:", error);
+      });
   };
+
   return (
     <div className="App">
       <div className="div2">
@@ -184,7 +198,25 @@ function HomePage() {
           <img src={logorevestir} alt="logo" height="200" width="200" />
 
           <SearchBar onSearch={handleSearch} />
-
+        </header>
+        {/* Exibir os resultados da busca */}
+        {searchResults.length > 0 ? (
+          <div className="search-results">
+            <h2>Resultados da busca:</h2>
+            <ul>
+              {searchResults.map((product, index) => (
+                <li key={index}>
+                  <img src={product.image} alt={product.name} />
+                  <h3>{product.name}</h3>
+                  <p>{product.description}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ) : (
+          <p></p>
+        )}
+      
           <Link to="/produtos">
             <p className="prods">Produtos</p>
           </Link>
