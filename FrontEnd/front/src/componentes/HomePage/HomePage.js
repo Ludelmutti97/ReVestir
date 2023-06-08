@@ -11,10 +11,10 @@ import Footer from "../rodape/rodape";
 import { v4 as uuidv4 } from "uuid";
 // import Footer from "../Rodape/Rodape";
 import SearchBar from "../BarradePesquisa/BarraDePesquisa.js";
-
 import Carrousel from '../Carrousel/CarroselHome'
 import { Link } from 'react-router-dom';
 
+import { useState } from "react";
 
 
 const tshirtsArray = [
@@ -198,7 +198,7 @@ function HomePage() {
           <img src={logorevestir} alt="logo" height="200" width="200" />
 
           <SearchBar onSearch={handleSearch} />
-        </header>
+        <header/>
         {/* Exibir os resultados da busca */}
         {searchResults.length > 0 ? (
           <div className="search-results">
@@ -248,7 +248,7 @@ function HomePage() {
         </div>
         <div className='caixaHomePage'>
           <h1 className='Titulos'>Camisolas</h1>
-          <Carrousel items={tshirtsArray} />
+          <Carrousel items={camisolasArray} />
         </div>
         <div className="caixaHomePage">
           <h1 className="Titulos">Calças</h1>
