@@ -24,6 +24,8 @@ const tshirtsArray = [
         className="caixaCorrousel"
         src="imagens/RoupaDoSite/tshirt1.png"
         alt="7"
+        width={600}
+        height= {600}
       />
     ),
   },
@@ -34,6 +36,8 @@ const tshirtsArray = [
         className="caixaCorrousel"
         src="imagens/RoupaDoSite/tshirt2.png"
         alt="2"
+        width="200px"
+        height="200px"
       />
     ),
   },
@@ -44,6 +48,8 @@ const tshirtsArray = [
         className="caixaCorrousel"
         src="imagens/RoupaDoSite/tshirt3.png"
         alt="3"
+        width={600}
+        height={600}
       />
     ),
   },
@@ -54,6 +60,8 @@ const tshirtsArray = [
         className="caixaCorrousel"
         src="imagens/RoupaDoSite/tshirt4.png"
         alt="4"
+        width={600}
+        height={600}
       />
     ),
   },
@@ -64,6 +72,8 @@ const tshirtsArray = [
         className="caixaCorrousel"
         src="imagens/RoupaDoSite/tshirt5.png"
         alt="5"
+        width={600}
+        height={600}
       />
     ),
   },
@@ -73,7 +83,9 @@ const tshirtsArray = [
       <img
         className="caixaCorrousel"
         src="imagens/RoupaDoSite/tshirt6.png"
-        alt="6"
+        alt="6" 
+        width={600}
+        height={600}
       />
     ),
   },
@@ -84,37 +96,55 @@ const camisolasArray = [
     key: uuidv4(),
     content: <img className="caixaCorrousel"
       src="imagens/RoupaDoSite/hoodie1.png"
-      alt="7" />
+      alt="7"
+      width={600}
+      height={600}
+       />
   },
   {
     key: uuidv4(),
     content: <img className="caixaCorrousel"
       src="imagens/RoupaDoSite/hoodie2.png"
-      alt="2" />
+      alt="2"
+      width={600}
+      height={600}
+      />
   },
   {
     key: uuidv4(),
     content: <img className="caixaCorrousel"
       src="imagens/RoupaDoSite/hoodie3.png"
-      alt="3" />
+      alt="3"
+      width={600}
+      height={600}
+      />
   },
   {
     key: uuidv4(),
     content: <img className="caixaCorrousel"
       src="imagens/RoupaDoSite/hoodie4.png"
-      alt="4" />
+      alt="4" 
+      width={600}
+      height={600}
+      />
   },
   {
     key: uuidv4(),
     content: <img className="caixaCorrousel"
       src="imagens/RoupaDoSite/hoodie5.png"
-      alt="5" />
+      alt="5"
+      width={600}
+      height={600} 
+      />
   },
   {
     key: uuidv4(),
     content: <img className="caixaCorrousel"
       src="imagens/RoupaDoSite/hoodie6.png"
-      alt="6" />
+      alt="6" 
+      width={600}
+      height={600}
+      />
   }
 ];
 
@@ -126,6 +156,8 @@ const calcassArray = [
         className="caixaCorrousel"
         src="imagens/RoupaDoSite/calcas1.png"
         alt="7"
+        width={600}
+        height={600}
       />
     ),
   },
@@ -136,6 +168,8 @@ const calcassArray = [
         className="caixaCorrousel"
         src="imagens/RoupaDoSite/calcas2.png"
         alt="2"
+        width={600}
+        height={600}
       />
     ),
   },
@@ -146,6 +180,8 @@ const calcassArray = [
         className="caixaCorrousel"
         src="imagens/RoupaDoSite/calcas3.png"
         alt="3"
+        width={600}
+        height={600}
       />
     ),
   },
@@ -156,6 +192,8 @@ const calcassArray = [
         className="caixaCorrousel"
         src="imagens/RoupaDoSite/calcas4.png"
         alt="4"
+        width={600}
+        height={600}
       />
     ),
   },
@@ -165,7 +203,8 @@ const calcassArray = [
       <img
         className="caixaCorrousel"
         src="imagens/RoupaDoSite/calcas5.png"
-        alt="5"
+        alt="5" width={600}
+        height={600}
       />
     ),
   },
@@ -176,6 +215,8 @@ const calcassArray = [
         className="caixaCorrousel"
         src="imagens/RoupaDoSite/calcas6.png"
         alt="6"
+        width={600}
+        height={600}
       />
     ),
   },
@@ -275,20 +316,20 @@ function HomePage() {
         <div className="scrolldown">
           <img src={scrolldown} alt="scrolldown" height="75" />
         </div>
-        <div className="caixaHomePage">
+        <div className="caixaHomePage" style={{ backgroundColor: "white" }}>
           <h1 className="Titulos">T-Sthirts</h1>
           <Carrousel items={tshirtsArray} />
         </div>
-        <div className='caixaHomePage'>
-          <h1 className='Titulos'>Camisolas</h1>
-          <Carrousel items={camisolasArray} />
+        <div className='caixaHomePage' >
+          <h1 className='Titulos' >Camisolas</h1>
+          <Carrousel backgroundColor={"red"} items={camisolasArray} />
         </div>
-        <div className="caixaHomePage">
-          <h1 className="Titulos">Calças</h1>
+        <div className="caixaHomePage" style={{ backgroundColor: "white" }}>
+          <h1 className="Titulos" style={{ backgroundColor: "white" }} >Calças</h1>
           <Carrousel items={calcassArray} />
         </div>
-        <div className='caixaHomePage'>
-          <h1 className='Titulos'>Sapatilhas</h1>
+        <div className='caixaHomePage'  >
+          <h1 className='Titulos'  >Sapatilhas</h1>
           <Carrousel items={tshirtsArray} />
         </div>
         <Footer />

@@ -19,7 +19,7 @@ export default function Example(props) {
 
 
     return (
-        <div style={{ width: "80%", height: "500px", margin: "0 auto" }}>
+        <div style={{ width: "80%", height: "900px", margin: "0 auto", backgroundColor: props.bacl }}>
             {props.items !== undefined && <Carousel
                 slides={props.items}
                 goToSlide={state.goToSlide}
