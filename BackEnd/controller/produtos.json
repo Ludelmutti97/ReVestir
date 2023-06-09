@@ -1,59 +1,163 @@
 [{
-  
   "nome": "Blazer Lã Covilhã",
-  "categoria":  "casaco",
+  "categoria":  "Casaco",
   "cor": "Marrom",
   "material": "100% lã  e Botão reciclados",
   "sexo": "Feminino",
   "descrição": "Este blazer feito de 100% lã vai mantê-lo tão aquecido que você nem vai acreditar. Possui bolsos laterais e três botões na frente, dando um toque de sofisticação a qualquer look. ",
-  "onde comprar":"https://naz.pt/collections/women-jackets/products/covilha-wool-blazer-checked-brown?variant=43688041021682",
+  "onde_comprar":"https://naz.pt/collections/women-jackets/products/covilha-wool-blazer-checked-brown?variant=43688041021682",
   "favorite":"false",
-  "rating": "5"
+  "rating": "5",
+  "imagem": "./RoupasDoSite/casacola.png" 
 },
-{
-  "nome": "Casaco Algodão Orgânico Milfontes",
-  "cor": "Jeans",
-  "categoria": "casaco",
-  "material": "100% algodão orgânico",
-  "sexo": "Masculino",
-  "descrição": "Esta jaqueta é confeccionada em lona 100% algodão orgânico, e seu corte levemente oversized proporciona um caimento relaxado e confortável, perfeito para o dia a dia. ",
-  "onde comprar": "https://naz.pt/collections/men/products/milfontes-cotton-jacket-men-blue?variant=32166089949322",
-  "favorite":"false",
-  "rating": "4,5"
 
 
-},
-{
-  "nome": "JASMIN RED SANDÁLIAS VEGAN DE SALTO COM FIVELA",
-  "cor": "Vermelho",
-  "categoria":  "sapato",
-  "material": "Transpiráveis, eco-responsáveis, antimicrobianos e hipoalergénicos; Corte: microfibra com efeito de camurça",
-  "sexo": "Feminino",
-  "descrição": "Este modelo de tonalidade sólida e sóbria tem um design equilibrado que combina com um visual elegante e também com um mais casual.",
 
-  "onde comprar":"https://www.nae-vegan.com/pt/mulher/salto-alto/jasmin-red-sandalias-vegan_p5004.html?id=678&cat=422&pc=1",
-  "favorite":"false",
-  "rating": "3"
-},
-{
-  "nome": "BONÉ DE VELUDO",
-  "cor": "bege",
-  "categoria":  "bone",
+{"nome": "Calca de Veludo",
+  "cor": "Bege",
+  "categoria":  "Calca",
   "material": "100% Algodão Orgânico",
   "sexo": "Unissex",
-  "descrição": "Este boné de veludo tem certificação OEKO-TEX. OEKO-TEX® STANDARD 100 é um dos rótulos mais conhecidos do mundo para têxteis testados quanto a substâncias nocivas. Esta certificação garante que cada componente do produto (cada fio, botão e outros acessórios) é inofensivo para a saúde humana.",
-  "onde comprar":"https://isto.pt/products/corduroy-cap-off-white?variant=43406094270711",
-  "favorite":"false",
-  "rating": "4"
-},
+  "descrição": "Tecido italiano no seu melhor, com um corte clássico e versátil o suficiente para parecer casual ou formal, dependendo das circunstâncias. Ajuste cônico na perfeição (melhoramos seu ajuste com nosso corte Chinos).",
+  "onde_comprar":"https://isto.pt/collections/mens-trousers-and-shorts/products/corduroy-trousers-olive-green",
+  "favorite":"false", 
+  "rating":"4.9",
+  "imagem": "./RoupasDoSite/calcaVeludo.png"} ,
+
+
 {
-  "nome": "Vestido de linho Jane",
-  "cor": "Vermelho",
-  "categoria":  "Vestido",
-  "material": "100% linho. Ziper YKK 100% reciclado. ",
+
+  "nome": "Flora Cork",
+  "cor": "Bege",
+  "categoria":  "Sapatilhas",
+  "material": "Corte exterior: cortiça Fivelas: metal livre de níquel Forro: 90% microfibras e 10% laminaÁ?o de PU Palmilha: cortiça laminada Sola: Neolite (borracha sintética duradoura, adaptável e antiderrapante)",
   "sexo": "Feminino",
-  "descrição": "Eleve o seu estilo de verão com perfeição. Feito de 100% linho, este vestido elegante apresenta um decote halter, corpete forrado justo e uma deslumbrante alça cruzada nas costas para melhor suporte. A saia midi em camadas",
-  "onde comprar":"https://naz.pt/products/jane-linen-dress-red?variant=46479623815491",
+  "descrição": "sabrinas com fivela no tornozelo, biqueira redonda e laterais abertas fabricada com cortiça ",
+  "onde_comprar":"https://www.nae-vegan.com/pt/mulher/sapatos-rasos/flora-cork-sapatos-vegan_p5142.html?id=0&cat=0&pc=1&cpos=9250",
+  "favorite":"5", 
+  "rating":"5",
+  "imagem": "./RoupasDoSite/cork.png" },
+
+
+{  "nome": "Calca Jeans",
+  "cor": "Jeans",
+  "categoria":  "Calca",
+  "material": "24% algodão reciclado pós-consumo 13 onças/jarda2 Jeans clássico de cinco bolsos com braguilha de 4 botões ISTO. aba traseira em jakron reciclado",
+  "sexo": "Unissex",
+  "descrição": "A espera acabou. Os jeans essenciais de que todos precisamos estão aqui para ficar. Corte de uma qualidade robusta e luxuosa de 13 onças do principal fornecedor italiano de denim Candiani, nossos jeans azuis limpos são a combinação perfeita entre uma cor sólida lavada, uma aparência clássica e contemporânea, uma composição de tecido sustentável e uma cadeia de suprimentos verde, transparente e eficiente em água . Cortado e cosido em Portugal, claro. ",
+  "onde_comprar":"https://isto.pt/collections/mens-trousers-and-shorts/products/everyday-denim-blue",
+  "favorite":"false", 
+  "rating":"3",
+  "imagem": "./RoupasDoSite/calcajeans.png"
+},
+
+
+{
+"nome": "Thyme Black",
+  "cor": "Preta",
+  "categoria":  "Sapatilhas",
+  "material": "Corte exterior: piñatex feito com fibras de resíduos de folhas de ananás e PLA Atacadores de algodão Interior: 90% microfibras e 10% PU",
+  "sexo": "Unissex",
+  "descrição": "apatos desportivos com atacadores e sola de borracha chunky feitos de tecido orgânico manufacturado com fibras de folhas de ananás ",
+  "onde_comprar":"https://www.nae-vegan.com/pt/unissexo/sapatos-rasos/thyme-black-sapatos-vegan_p5069.html?id=699&cat=656&pc=1",
+  "favorite":"false", 
+  "rating":"4",
+  "imagem":  "./RoupasDoSite/sapatilhas5.png" },
+
+{
+  "nome": "Sandalia Holly orange",
+  "cor": "Laranja",
+  "categoria":  "Sapatilhas",
+  "material": "Cordões: cortiça natural (modelo laranja) e microfibra tipo camurça (modelo preto) Revestimento do corte: pele vegana com efeito de camurça feita de microfibras sustentáveis Forro: microfibras e laminação de PU Sola: borracha sintética",
+  "sexo": "Feminino",
+  "descrição": "as sandálias de salto para mulher com cordões no tornozelo e peito do pé, revestidas de microfibra tipo camurça ",
+  "onde_comprar":"https://www.nae-vegan.com/pt/mulher/sandalias/holly-orange-sandalias-vegan_p5184.html?id=5&cat=422&pc=0",
   "favorite":"false",
-  "rating": "5"
-}]
+  "rating":"5",
+  "imagem":  "./RoupasDoSite/sandaliaorange.png" },
+
+  {
+    "nome": "Dara Pink",
+  "cor": "Branco,rosa e lilas",
+  "categoria":  "Sapatilhas",
+  "material": "Atacadores: algodão vegan encerado com enchimento de poliéster reciclado Forro: 90% microfibra e 10% PU Palmilha: acolchoada com EVA e anti-humidade Solas de borracha ñ duradoura, antiderrapante",
+  "sexo": "Feminino",
+  "descrição": "os ténis urbanos práticos e minimalistas com atacadores de algodão e cano baixo, feitos de microfibras recicladas ",
+  "onde_comprar":"https://www.nae-vegan.com/pt/mulher/tenis/dara-pink-tenis-vegan_p5210.html?id=0&cat=0&pc=1&cpos=9250",
+  "favorite":"false", 
+  "rating":"4",
+  "imagem":"./RoupasDoSite/darapink.png"
+
+  },
+
+ {
+  "nome": "ZINNIA BLACK",
+  "cor": "preta",
+  "categoria":  "Sapatilhas",
+  "material": "Corte e tiras: Apple Leather feito com fibras provenientes dos resíduos da indústria do sumo de maça Fivela: metal livre de níquel Forro: microfibras e laminação de PU Sola: borracha sintética",
+  "sexo": "Feminino",
+  "descrição": "sandálias de salto para mulher com tiras e fivela no tornozelo feitas de apple leather ",
+  "onde_comprar":"https://www.nae-vegan.com/pt/mulher/sandalias/zinnia-black-sandalias-vegan_p5104.html?id=676&cat=422&pc=1",
+  "favorite":"false", 
+  "rating":"4",
+  "imagem":"./RoupasDoSite/zinia.png"
+ },
+
+  {
+    "nome": "STRIPED CLASSIC T-SHIRT",
+  "cor": "Tempestade/Chambray Suave",
+  "categoria":  "T-Shirt",
+  "material": "100% algodão orgânico",
+  "sexo": "UNISEX",
+  "descrição": "Simples é difícil de acertar. É por isso que gastamos um tempo ridículo para trazer a você a melhor camiseta que já usamos pelo melhor preço que já vimos. O melhor algodão orgânico produzido em Portugal foi feito à medida para que se sinta da mesma forma que deseja: sem esforço. Perfeitamente ajustado para fazer o homem. Tem uma gola clássica e o comprimento certo do ombro para obter a altura da manga onde precisa estar. Pregá-lo estava longe de ser simples, mas agora é todo seu",
+  "onde_comprar":"https://isto.pt/collections/mens-t-shirts/products/striped-classic-t-shirt-storm-soft-chambray",
+  "favorite":"false", 
+  "rating":"4",
+  "imagem": "./RoupasDoSite/shirt.png"
+  },
+{
+
+  "nome": "CLASSIC T-SHIRT",
+  "cor": "Branca",
+  "categoria":  "T-shirt",
+  "material": "100% algodão orgânico",
+  "sexo": "UNISEX",
+  "descrição": "Simples é difícil de acertar. É por isso que gastamos um tempo ridículo para trazer a você a melhor camiseta que já usamos pelo melhor preço que já vimos. O melhor algodão orgânico produzido em Portugal foi feito à medida para que se sinta da mesma forma que deseja: sem esforço. Perfeitamente ajustado para fazer o homem. Tem uma gola clássica e o comprimento certo do ombro para obter a altura da manga onde precisa estar. Pregá-lo estava longe de ser simples, mas agora é todo seu.",
+  "onde_comprar":"https://isto.pt/collections/mens-t-shirts/products/classic-t-shirt-white",
+  "favorite":"false", 
+  "rating":"5",
+  "imagem": "./RoupasDoSite/shirtbranca.png"
+},
+
+
+
+
+{
+  "nome": "BRETON",
+  "cor": "Green-White",
+  "categoria":  "T-shirt",
+  "material": "100% algodão orgânico",
+  "sexo": "UNISEX",
+  "descrição": "Uma abordagem sofisticada para o mariniére clássico. Confeccionado em jersey premium de peso médio com listras horizontais e mangas compridas. Uma peça icônica perfeita para qualquer época do ano. Todo ano.",
+  "onde_comprar":"https://isto.pt/collections/mens-t-shirts/products/breton-green-white",
+  "favorite":"false", 
+  "rating":"4",
+  "imagem": "./RoupasDoSite/green.png"
+},
+
+{
+
+  "nome": "Calca charcoal",
+  "cor": "marrom",
+  "categoria":  "calca",
+  "material": "100% Algodão Orgânico",
+  "sexo": "Unissex",
+  "descrição": "340 gramas por metro quadrado de algodão orgânico cuidadosamente obtido. Nem muito rígido, nem muito solto. Ajuste cônico com perfeição. Feito para durar mais do que sua calça cáqui média.",
+  "onde_comprar":"https://isto.pt/collections/mens-t-shirts/products/breton-green-white",
+  "favorite":"false", 
+  "rating":"4",
+  "imagem": "./RoupasDoSite/brown.png"
+}
+
+
+]

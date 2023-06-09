@@ -2,8 +2,18 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #a66948;
-
+  text-align: center;
+  
+ 
+  
+  
+}
+.container {
+  background-color: #BFA37E;
+  margin: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  
 }
 
 .container_rodape {

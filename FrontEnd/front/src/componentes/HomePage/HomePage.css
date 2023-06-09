@@ -1,5 +1,5 @@
- *{
-  background-color: #cdf0c5;
+ html{
+  background-color: #bddbb662;
 }
 
 .header {
@@ -105,7 +105,7 @@ p {
 }
 
 .caixaHomePage {
-
+  padding-top: 100px;
   margin-top: 300px;
   justify-content: center;
   display: flex;
@@ -116,7 +116,7 @@ p {
 }
 
 .Titulos {
-
+  
   margin-bottom: 80px;
   align-items: center;
   width: fit-content;
@@ -126,7 +126,7 @@ p {
 
 .App{
 
-  margin: 50px 50px 400px 50px
+  margin: 50px 0px 400px 0px
 }
 .App{
 
