@@ -24,8 +24,8 @@ const style = {
   transform: "translate(-50%, -50%)",
   boxShadow: 24,
   gap: "25px",
-  width: "90vw",
-  height: " 90vh",
+  width: "fit-content",
+  height: "fit-content",
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
@@ -281,56 +281,58 @@ function HomePage() {
   return (
     <div className="App">
       <div className="div2">
-        <header className="header">
-          <img src={logorevestir} alt="logo" height="200" width="200" />
-
-          <SearchBar onSearch={handleSearch} />
-          <header />
+        <div className="header">
+          <div>
+            <img src={logorevestir} alt="logo" height="200" width="200" />
+          </div>
+          <div>
+            <SearchBar onSearch={handleSearch} />
+          </div>
 
           {/* Exibir os resultados da busca */}
-          <div>
-            {searchResults.length > 0 ? (
-              <Modal
-                open={open}
-                onClose={handleClose}
-                aria-labelledby="modal-modal-title"
-                aria-describedby="modal-modal-description"
-                className="modal"
-                sx={style}
-              >
-                <Box>
-                  <ul className="lista-products">
-                      {searchResults.map((p, index) => {
-                        return (
-                          <div className="modal-products">
-                            <a href={`/produtos/${p._id}`}>
-                              <img src={p.imagem} alt="" />
-                            </a>
-                            <h4 className="h">{p.nome}</h4>
-                            <div className="rating">
-                              <i className="fa fa-star"></i>
-                              <i className="fa fa-star"></i>
-                              <i className="fa fa-star"></i>
-                              <i className="fa fa-star"></i>
-                              <i className="fa fa-star-o"></i>
-                            </div>
-                          </div>
-                        );
-                      })}
-                  </ul>
-                </Box>
-              </Modal>
-            ) : (
-              <p></p>
-            )}
-          </div>
-          <nav>
-            <ul id="MenuItems">
+          {searchResults.length > 0 && (
+            <Modal
+              open={open}
+              onClose={handleClose}
+              aria-labelledby="modal-modal-title"
+              aria-describedby="modal-modal-description"
+              className="modal"
+              sx={style}
+            >
+              <Box>
+                <ul className="lista-products">
+                  {searchResults.map((p, index) => {
+                    return (
+                      <div className="modal-products">
+                        <a href={`/produtos/${p._id}`}>
+                          <img src={p.imagem} alt="" />
+                        </a>
+                        <h4 className="h">{p.nome}</h4>
+                        <div className="rating">
+                          <i className="fa fa-star"></i>
+                          <i className="fa fa-star"></i>
+                          <i className="fa fa-star"></i>
+                          <i className="fa fa-star"></i>
+                          <i className="fa fa-star-o"></i>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </ul>
+              </Box>
+            </Modal>
+          )}
+          <div className="NavItems">
+            <ul id="MenuItems" className="menuItems">
               <li>
-                <a href="/produtos" className="linkpp">Products</a>
+                <a href="/produtos" className="linkpp">
+                  Products
+                </a>
               </li>
               <li>
-                <a href="/About" className="linkpp" >About</a>
+                <a href="/About" className="linkpp">
+                  About
+                </a>
               </li>
               <li>
                 <a href="/Closet">
@@ -338,38 +340,36 @@ function HomePage() {
                 </a>
               </li>
             </ul>
-          </nav>
-        </header>
-      </div>
+          </div>
+        </div>
 
-      <div className="div1">
-        <img src={camiseta} alt="camisola" height="200" />
-        <img src={calcas} alt="calcas" height="225" />
-        <img src={hoodie} alt="hoodie" height="250" />
-        <img src={sapatilhas} alt="sapatilhas" height="200" />
+        <div className="div1">
+          <img src={camiseta} alt="camisola" height="200" />
+          <img src={calcas} alt="calcas" height="225" />
+          <img src={hoodie} alt="hoodie" height="250" />
+          <img src={sapatilhas} alt="sapatilhas" height="200" />
+        </div>
       </div>
-
       <div className="div3">
         <div className="bodyindex"></div>
         <div className="scrolldown">
           <img src={scrolldown} alt="scrolldown" height="75" />
         </div>
-          
+
         <div className="caixaHomePage" style={{ backgroundColor: "white" }}>
           <div className="Sthirts">
             <Link to="/produtos">
-              <button >See all</button>
+              <button>See all</button>
             </Link>
           </div>
-          <h1 className="Titulos" >Sthirts</h1>
-          <Carrousel  items={tshirtsArray} />
+          <h1 className="Titulos">Sthirts</h1>
+          <Carrousel items={tshirtsArray} />
         </div>
 
-        <div className="caixaHomePage" >
-
+        <div className="caixaHomePage">
           <div className="Camisolas">
             <Link to="/produtos">
-              <button >See all</button>
+              <button>See all</button>
             </Link>
           </div>
 
@@ -377,27 +377,18 @@ function HomePage() {
           <Carrousel items={camisolasArray} />
         </div>
 
-        
-
         <div className="caixaHomePage" style={{ backgroundColor: "white" }}>
-
-           <div className="botaoCalcas">
+          <div className="botaoCalcas">
             <Link to="/produtos">
-          <button >See all</button>
-          </Link>
+              <button>See all</button>
+            </Link>
           </div>
 
-
-          <h1 className="Titulos" >Calças</h1>
+          <h1 className="Titulos">Calças</h1>
           <Carrousel items={calcassArray} />
-          
         </div>
-
-        </div>
-        <Footer />
-
-
-      
+      </div>
+      <Footer />
     </div>
   );
 }

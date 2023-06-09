@@ -1,20 +1,27 @@
-html {
+html{
   background-color: #bddbb662;
 }
 
 .header {
   display: flex;
   flex-direction: row;
-  gap: 10%;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 25px;
+  margin-right: 25px;
+  
 }
 
+
 .div1 {
+ 
   display: flex;
   justify-content: center;
   align-items: center;
   height: 60vh;
   /* Adicionado para centralizar verticalmente */
 }
+
 
 .scrolldown {
   display: flex;
@@ -27,7 +34,7 @@ html {
 }
 
 .header_produtos {
-  background: radial-gradient(#fff #ffd6d6);
+  background: radial-gradient(#fff, #ffd6d6);
 }
 
 .container {
@@ -41,23 +48,20 @@ html {
   display: flex;
   align-items: center;
   padding: 20px;
-  align-items: center;
 }
 
-nav {
+ {
   flex: 1;
   text-align: right;
   padding-right: 1%;
 }
 
-nav ul {
+ ul {
   display: inline-block;
   list-style-type: none;
-  align-items: center;
-  margin-top: 20%;
 }
 
-nav ul li {
+ ul li {
   display: inline-block;
   margin-right: 20px;
 }
@@ -78,8 +82,11 @@ p {
 
 .usericon {
   float: right;
-  height: 30px;
+  height: 30px
+
 }
+
+
 
 .prods {
   float: right;
@@ -89,6 +96,8 @@ p {
   font-weight: 500;
   color: aliceblue;
 }
+
+
 
 @keyframes bounce {
   0% {
@@ -116,17 +125,16 @@ p {
 }
 
 .Titulos {
+  
   margin-bottom: 80px;
   align-items: center;
   width: fit-content;
   border-top: 5px solid #514540;
-  border-bottom: 5px solid #bfa37e;
+  border-bottom: 5px solid #BFA37E;
 }
 
-.App {
-  margin: 50px 0px 400px 0px;
-}
-.App {
+.App{
+
   position: relative;
 }
  .botaoCalcas {
@@ -150,71 +158,15 @@ p {
     justify-content: flex-end;
 }
 
-.App {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin-top: 50px;
-}
-
-.div2 {
-  margin-bottom: 20px;
-}
-
-.header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.header img {
-  margin-right: 20px;
-}
-
-.results {
-  text-align: center;
-}
-
-.results h2 {
-  margin-bottom: 10px;
-}
-
-.results ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.results li {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.results li img {
-  width: 100px;
-  height: 100px;
-  margin-right: 10px;
-}
-
-.results li h3 {
-  margin: 0;
-}
-
-.results li p {
-  margin: 0;
-}
-
-
 .modal{
-
-  background-color: #514540;
+  background-color: beige;
+  padding: 25px;
+  
 }
 .modal-products img {
   width: 150px;
   height: 150px;
-  background-color: #514540;
+  
 
  
 }
@@ -227,12 +179,22 @@ p {
   align-content: center;
   flex-wrap: wrap;
   overflow: hidden;
-  background-color: #514540;
+  
+
 
 }
 
-.h{
+.h {
 
   color: white;
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
+
+.NavItems {
+  width: fit-content;
+}
+
+
+.menuItems {
+  display: flex;
+} 

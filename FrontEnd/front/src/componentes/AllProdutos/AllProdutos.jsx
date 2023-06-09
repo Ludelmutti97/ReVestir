@@ -32,14 +32,14 @@ function AllProducts() {
 
       <Header />
 
-      <div className="small-container">
-        <div className="row row-2">
+      <div className="afs">
+        <div className="rowh">
           <select>
             <option>Better Products</option>
           </select>
           <h2 className="all">All Products</h2>
         </div>
-        <div className="row">
+        <div className="AllProducts_row">
           {
             state.map(p => (
               <div className="col-4">
@@ -66,11 +66,12 @@ function AllProducts() {
       </div>
 
       <div className="page-btn">
-        <span>1</span>
-        <span>2</span>
-        <span>3</span>
+        <div>
+          <span>1</span>
+          <span>2</span>
+          <span>3</span>
+        </div>
 
-        <span>&#8594;</span>
       </div>
 
 
