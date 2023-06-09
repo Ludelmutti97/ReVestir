@@ -1,12 +1,13 @@
-
 .row {
   display: flex;
   justify-content: space-around;
   align-items: center;
   background-color: #a66948;
+
 }
+
 .container_rodape {
-  background-color: #a66948;
+  background-color: black;
   margin-top: 27%;
   font-size: 24px;
 }
@@ -29,13 +30,14 @@
   background-color: #a66948;
 }
 
-.footer-col-2,  .footer-col-4 {
+.footer-col-2,
+.footer-col-4 {
   min-width: 250px;
   margin-bottom: 10px;
   background-color: #a66948;
 }
 
-.img{
+.img {
   background-color: #a66948;
   margin: 6px;
 }
@@ -47,12 +49,12 @@
 }
 
 .footer-col-2 img {
- 
+
   margin-bottom: 10px;
   background-color: #a66948
 }
 
- .footer-col-4 {
+.footer-col-4 {
   text-align: center;
   background-color: #a66948
 }
