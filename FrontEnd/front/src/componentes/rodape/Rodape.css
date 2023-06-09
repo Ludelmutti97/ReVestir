@@ -1,7 +1,6 @@
 
 .row {
-  
-  background-color: #BFA37E;
+ 
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -12,14 +11,23 @@
   
   
 }
-.container {
+
+.row1{
   background-color: #BFA37E;
+}
+.container {
+ 
   margin: auto;
   padding-left: 10px;
   padding-right: 10px;
   
 }
 
+
+.container1{
+
+  background-color: #BFA37E;
+}
 .footer {
   background-color: #BFA37E;
   padding: 20px 0 20px;

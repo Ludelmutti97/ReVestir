@@ -13,7 +13,7 @@ function SingleProduct() {
 
     async function fetchSingle() {
       console.log("Single...");
-      const res = await fetch(`/api/products/:id}`, options);
+      const res = await fetch(`/api/products/${/id}}`, options);
       if (res.status === 200) {
         console.log("Product");
         const body = await res.json();
@@ -121,74 +121,9 @@ function SingleProduct() {
         </div>
       </div>
 
-      {/* title */}
-      <div className="small-container">
-        <div className="row row-2">
-          <h2>Related Product</h2>
-        </div>
-      </div>
+     
 
-      {/* products */}
-      <div className="small-container">
-        <div className="row">
-          <div className="col-4">
-            <img
-              src="https://cdn.shopify.com/s/files/1/0051/4447/7770/files/Ripstop_Safari_Jacket_Beige_1_836e3dc7-359e-4c7e-a052-b9ac8eb064ed.webp?v=1684832251&width=493"
-              alt=""
-            />
-            <h4>Jaqueta Safari</h4>
-            <div className="rating">
-              <i className="fa fa-star"></i>
-              <i className="fa fa-star"></i>
-              <i className="fa fa-star"></i>
-              <i className="fa fa-star"></i>
-              <i className="fa fa-star-o"></i>
-            </div>
-          </div>
-          <div className="col-4">
-            <img
-              src="https://cdn.shopify.com/s/files/1/0051/4447/7770/files/Merino_Wool_Sweater_Black_1_655b6a9d-3dd5-4e56-aaec-003c763a078c.webp?v=1685705840&width=493"
-              alt=""
-            />
-            <h4>Suéter de lã Merino</h4>
-            <div className="rating">
-              <i className="fa fa-star"></i>
-              <i className="fa fa-star"></i>
-              <i className="fa fa-star"></i>
-              <i className="fa fa-star-half-o"></i>
-              <i className="fa fa-star-o"></i>
-            </div>
-          </div>
-          <div className="col-4">
-            <img
-              src="https://cdn.shopify.com/s/files/1/0051/4447/7770/files/Flannel_Shirt_Light_Blue_1_2ea0681f-0db3-4a46-8247-15ccb5898209.webp?v=1685703442&width=493"
-              alt=""
-            />
-            <h4>Suéter de Algodão</h4>
-            <div className="rating">
-              <i className="fa fa-star"></i>
-              <i className="fa fa-star"></i>
-              <i className="fa fa-star"></i>
-              <i className="fa fa-star"></i>
-              <i className="fa fa-star-half-o"></i>
-            </div>
-          </div>
-          <div className="col-4">
-            <img
-              src="https://cdn.shopify.com/s/files/1/0051/4447/7770/products/Cotton_Sweater_Moss_Green_1_6761962d-974b-4314-bd2d-7a83bf268917.webp?v=1685701352"
-              alt=""
-            />
-            <h4>Red Printed T-shirt</h4>
-            <div className="rating">
-              <i className="fa fa-star"></i>
-              <i className="fa fa-star"></i>
-              <i className="fa fa-star"></i>
-              <i className="fa fa-star"></i>
-              <i className="fa fa-star-o"></i>
-            </div>
-          </div>
-        </div>
-      </div>
+    
 
       <div className="footer">
         <Footer />

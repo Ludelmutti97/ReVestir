@@ -14,6 +14,7 @@ const {
   removeOutFit,
   findCor,
   findMaterial,
+  insertProdutos,
   
 
 } = require("../utils/auth");
@@ -32,6 +33,12 @@ async function getUser() {
 
 async function getProduto() {
   const pedido = await findProdutos();
+  return pedido;
+}
+
+
+async function createProduto(products) {
+  const pedido = await insertProdutos(products);
   return pedido;
 }
 
@@ -62,6 +69,7 @@ async function getFavorite() {
 // Add Outfit --
 
 async function addOutFit(id, uid) {
+  console.log(2, id)
   const pedido = await createOutFits(id, uid);
   return pedido;
 }
@@ -137,6 +145,6 @@ module.exports = {
   getColor,
   getGenders,
   getMaterial,
-  
+  createProduto
 
 };

@@ -8,8 +8,8 @@ function Footer() {
   return (
 
     <div class="footer">
-      <div class="container">
-        <div class="row">
+      <div class="container1">
+        <div class="row1">
           <div class="footer-col-2">
             <p>
               {" "}
