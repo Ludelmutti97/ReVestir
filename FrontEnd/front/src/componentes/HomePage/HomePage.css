@@ -45,6 +45,7 @@
   display: flex;
   align-items: center;
   padding: 20px;
+  align-items: center;
 }
 
 nav {
@@ -55,6 +56,8 @@ nav {
 nav ul {
   display: inline-block;
   list-style-type: none;
+  align-items: center;
+  margin-top: 20%;
 }
 
 nav ul li {
@@ -73,8 +76,7 @@ p {
 
 .usericon {
   float: right;
-  height: 30px
-
+  height: 50px
 }
 
 

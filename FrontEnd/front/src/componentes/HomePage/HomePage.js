@@ -268,7 +268,7 @@ function HomePage() {
               </ul>
             </div>
           ) : (
-            <p></p>
+            null
           )}
 
           <nav>
