@@ -3,7 +3,7 @@ import "./Rodape.css";
 import instagramlogo from "../imagens/instagramlogo.png";
 import facebooklogo from "../imagens/facebooklogo.png";
 import whatsapplogo from "../imagens/whatsapplogo.png";
-import recyclelogo from "../imagens/recyclelogo.png";
+
 
 function Footer() {
   return (
@@ -21,8 +21,6 @@ function Footer() {
               segurança e consciência ambiental!
             </p>
           </div>
-
-          <div class="footer-col-4">
             <h3>Follow us</h3>
             <br />
             <ul className="">
@@ -37,7 +35,7 @@ function Footer() {
         <hr />
         <p class="copyright">Copyright 2023 - ReVestir</p>
       </div>
-    </div>
+    
   )
 }
 

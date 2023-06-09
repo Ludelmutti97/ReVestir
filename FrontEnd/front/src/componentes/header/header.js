@@ -20,16 +20,16 @@ function Header() {
         <nav>
           <ul id="MenuItems">
             <li>
-              <a href="/">Home</a>
+                  <a href="/" className="linkpp">Home</a>
             </li>
             <li>
-              <a href="/produtos">Products</a>
+                  <a href="/produtos" className="linkpp" >Products</a>
             </li>
             <li>
-              <a href="/About">About</a>
+                  <a href="/About" className="linkpp">About</a>
             </li>
             <li>
-            <a href="/Closet">
+                  <a href="/Closet" className="linkpp">
               <img className="usericon"
               src={usericon}
               alt="usericon"
