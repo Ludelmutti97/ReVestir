@@ -10,7 +10,7 @@ import hoodie from "../imagens/hoodie.png";
 import { v4 as uuidv4 } from "uuid";
 import SearchBar from "../barradePesquisa/barraDePesquisa";
 import Carrousel from "../Carrousel/CarroselHome";
-
+import { Link } from "react-router-dom";
 import Footer from "../rodape/rodape";
 
 const tshirtsArray = [
@@ -318,7 +318,9 @@ function HomePage() {
           
         <div className="caixaHomePage" style={{ backgroundColor: "white" }}>
           <div className="Sthirts">
-            <button >See all</button>
+            <Link to="/produtos">
+              <button >See all</button>
+            </Link>
           </div>
           <h1 className="Titulos" >Sthirts</h1>
           <Carrousel  items={tshirtsArray} />
@@ -327,7 +329,9 @@ function HomePage() {
         <div className="caixaHomePage" >
 
           <div className="Camisolas">
-            <button >See all</button>
+            <Link to="/produtos">
+              <button >See all</button>
+            </Link>
           </div>
 
           <h1 className="Titulos">Camisolas</h1>
@@ -339,7 +343,9 @@ function HomePage() {
         <div className="caixaHomePage" style={{ backgroundColor: "white" }}>
 
            <div className="botaoCalcas">
+            <Link to="/produtos">
           <button >See all</button>
+          </Link>
           </div>
 
 
