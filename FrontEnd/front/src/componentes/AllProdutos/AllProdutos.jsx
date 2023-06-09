@@ -35,7 +35,7 @@ function AllProducts() {
       <div className="small-container">
         <div className="row row-2">
           <select>
-            <option>Side bar</option>
+            <option>Better Products</option>
           </select>
           <h2  className="all">All Products</h2>
         </div>
@@ -43,7 +43,7 @@ function AllProducts() {
           {
             state.map(p => (
               <div className="col-4">
-                <a href={`/${p._id}`}>
+                <a href={`/produtos/${p._id}`}>
                   <img
                     src={p.imagem}
                     alt=""
@@ -55,7 +55,7 @@ function AllProducts() {
                   <i className="fa fa-star"></i>
                   <i className="fa fa-star"></i>
                   <i className="fa fa-star"></i>
-                  <i className="fa fa-star"></i>
+                  <i className="fa fa-star-o"></i>
                 </div>
               </div>
             ))

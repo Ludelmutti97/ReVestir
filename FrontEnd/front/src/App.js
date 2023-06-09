@@ -19,12 +19,13 @@ function App() {
       <Routes>
         <Route exact path="/" element={<HomePage />} />
         <Route path="/About" element={<About />} />
-        <Route path="/id" element={<SingleProduct />} />
-        <Route path="/ProductID2" element={<SingleProductTwo />} />
+        {/* <Route path="/id" element={<SingleProduct />} />
+        <Route path="/ProductID2" element={<SingleProductTwo />} /> */}
         {/* <Route path="/carrosel1" element={<Example />} /> */}
         <Route path="/Closet" element={<Closet />} />
         <Route path="/luana" element={<Luana />} />
         <Route path="/produtos" element={<Produtos />} />
+        <Route path="/produtos/:id" element={<SingleProduct />} />
         {/* <Route path="/produtohomepage" element={<KeepMountedModal />} /> */}
       </Routes>
     </Router>
