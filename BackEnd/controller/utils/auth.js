@@ -2,7 +2,6 @@ const { ObjectId } = require("mongodb");
 const { getMongoCollection } = require("./baseDados");
 
 const collectionName = "produtos";
-const collectionReview = "reviews";
 const collectionCategory = "categorias";
 const collectionUser = "users";
 const collectionFavorites = "favorites";
@@ -21,6 +20,12 @@ async function findUser() {
 async function findProdutos() {
   const collection = await getMongoCollection(collectionName);
   return collection.find().toArray();
+}
+
+async function insertProdutos(products) {
+  const collection = await getMongoCollection(collectionName);
+  console.log(products);
+  return collection.insertMany(products);
 }
 
 // Barra de Pesquisa
@@ -66,8 +71,10 @@ async function findFavoriteAll() {
 // OUTFIT -
 async function createOutFits(pid, uid) {
   const collection = await getMongoCollection(collectionOutFit);
-  const userOutfit = await collection.findOne({ uid: uid });
+  const userOutfit = await collection.findOne({ uid: new Object(uid) });
+  console.log(3, uid);
   let outFit;
+  console.log(pid);
   if (userOutfit) {
     outFit = await collection.updateOne(
       { uid: uid },
@@ -105,7 +112,6 @@ async function findTop() {
   return products;
 }
 
-
 // Buscar Categoria
 async function findCategory(categoria) {
   const collection = await getMongoCollection(collectionName);
@@ -132,7 +138,6 @@ async function findGenero(sexo) {
   return result;
 }
 
-
 // Buscar p/ material
 async function findMaterial(material) {
   const collection = await getMongoCollection(collectionName);
@@ -146,12 +151,10 @@ async function findMaterial(material) {
 async function findRating(rating) {
   const collection = await getMongoCollection(collectionName);
 
-  const result = await collection.find({ rating: (rating) }).toArray();
+  const result = await collection.find({ rating: rating }).toArray();
 
   return result;
 }
-
-
 
 // Filtro todas a categoria sidebar*******
 
@@ -164,20 +167,17 @@ async function findFilter(categoria) {
   return filteredProducts;
 }
 
-//                    
+//
 // CRIAR AVALIAÇÂO
 async function findReview(rating, pid) {
   const collection = await getMongoCollection(collectionName);
-  const avaliacao = await collection.updateOne({ _id: new ObjectId(pid)},
-  { $set: rating })
- 
+  const avaliacao = await collection.updateOne(
+    { _id: new ObjectId(pid) },
+    { $set: rating }
+  );
 
-
-  return avaliacao.value
-  
-  
+  return avaliacao.value;
 }
-
 
 module.exports = {
   findProdutos,
@@ -196,5 +196,5 @@ module.exports = {
   findCor,
   findGenero,
   findMaterial,
-
+  insertProdutos,
 };
