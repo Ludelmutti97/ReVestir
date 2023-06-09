@@ -1,0 +1,46 @@
+.cart{
+display: flex;
+justify-content: center;
+text-align: center;
+background-color: beige;
+width: 600px;
+height: 800px;
+margin-left: calc(50vw - 300px);
+flex-direction: row;
+border-radius: 20px;
+text-justify: justify;
+text-align: justify-all;
+color: #5E4F2B;
+
+
+}
+
+
+.p {
+
+    text-align: justify;
+    
+}
+.imagem{
+
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+    justify-content: center;
+}
+
+
+.col-2 {
+    flex-basis: 50%;
+
+    
+}
+
+ 
+
+.col-2 h1 {
+    font-size: 24px;
+    line-height: 60px;
+    margin: 25px 0;
+    
+}

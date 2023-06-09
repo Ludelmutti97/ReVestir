@@ -4,7 +4,6 @@ import HomePage from "./componentes/HomePage/HomePage";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Closet from "./componentes/Closet/Closet";
 import SingleProduct from "./componentes/SingleProduto/SingleProduto";
-import SingleProductTwo from "./componentes/SingleProduto/SingleProduto2";
 import About from "./componentes/AboutUs/About";
 import { Luana } from "./componentes/luana/luana";
 //import Example from "./componentes/carrosel/Roupa/Carrousel/CarroselHome"
@@ -19,9 +18,7 @@ function App() {
       <Routes>
         <Route exact path="/" element={<HomePage />} />
         <Route path="/About" element={<About />} />
-        {/* <Route path="/id" element={<SingleProduct />} />
-        <Route path="/ProductID2" element={<SingleProductTwo />} /> */}
-        {/* <Route path="/carrosel1" element={<Example />} /> */}
+       
         <Route path="/Closet" element={<Closet />} />
         <Route path="/luana" element={<Luana />} />
         <Route path="/produtos" element={<Produtos />} />

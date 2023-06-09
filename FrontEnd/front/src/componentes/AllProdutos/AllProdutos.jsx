@@ -25,19 +25,19 @@ function AllProducts() {
     }
 
     fetchData()
-  }, );
+  }, []);
 
   return (
     <>
 
-      <Header/>
+      <Header />
 
       <div className="small-container">
         <div className="row row-2">
           <select>
             <option>Better Products</option>
           </select>
-          <h2  className="all">All Products</h2>
+          <h2 className="all">All Products</h2>
         </div>
         <div className="row">
           {
@@ -61,7 +61,7 @@ function AllProducts() {
             ))
           }
 
-          
+
         </div>
       </div>
 
@@ -73,9 +73,9 @@ function AllProducts() {
         <span>&#8594;</span>
       </div>
 
-     
-       <Footer/>
-      
+
+      <Footer />
+
 
     </>
   );

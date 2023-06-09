@@ -1,4 +1,4 @@
- html{
+html {
   background-color: #bddbb662;
 }
 
@@ -6,19 +6,15 @@
   display: flex;
   flex-direction: row;
   gap: 10%;
-  
 }
 
-
 .div1 {
- 
   display: flex;
   justify-content: center;
   align-items: center;
   height: 60vh;
   /* Adicionado para centralizar verticalmente */
 }
-
 
 .scrolldown {
   display: flex;
@@ -31,7 +27,7 @@
 }
 
 .header_produtos {
-  background: radial-gradient(#fff, #ffd6d6);
+  background: radial-gradient(#fff #ffd6d6);
 }
 
 .container {
@@ -73,11 +69,8 @@ p {
 
 .usericon {
   float: right;
-  height: 30px
-
+  height: 30px;
 }
-
-
 
 .prods {
   float: right;
@@ -87,8 +80,6 @@ p {
   font-weight: 500;
   color: aliceblue;
 }
-
-
 
 @keyframes bounce {
   0% {
@@ -111,24 +102,106 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  
-
 }
 
 .Titulos {
-  
   margin-bottom: 80px;
   align-items: center;
   width: fit-content;
   border-top: 5px solid #514540;
-  border-bottom: 5px solid #BFA37E;
+  border-bottom: 5px solid #bfa37e;
 }
 
-.App{
-
-  margin: 50px 0px 400px 0px
+.App {
+  margin: 50px 0px 400px 0px;
 }
-.App{
-
+.App {
   position: relative;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 50px;
+}
+
+.div2 {
+  margin-bottom: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header img {
+  margin-right: 20px;
+}
+
+.results {
+  text-align: center;
+}
+
+.results h2 {
+  margin-bottom: 10px;
+}
+
+.results ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.results li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.results li img {
+  width: 100px;
+  height: 100px;
+  margin-right: 10px;
+}
+
+.results li h3 {
+  margin: 0;
+}
+
+.results li p {
+  margin: 0;
+}
+
+
+.modal{
+
+  background-color: #514540;
+}
+.modal-products img {
+  width: 150px;
+  height: 150px;
+  background-color: #514540;
+
+ 
+}
+
+.lista-products {
+  gap: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  overflow: hidden;
+  background-color: #514540;
+
+}
+
+.h{
+
+  color: white;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }

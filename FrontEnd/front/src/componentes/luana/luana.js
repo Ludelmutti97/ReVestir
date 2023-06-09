@@ -3,30 +3,26 @@ import React from "react";
 import "./luana.css";
 //import {Link} from 'react-router-dom';
 
-
-
 export function Luana() {
   return (
     <div className="formata">
-<AddToOutfitButton productId="647da6d2ff948d77053693f8" />
-<RemoveToOutfitButton productId="647da6d2ff948d77053693f8" />
-<SearchBar />
-<FetchAllProductsButton />
-<Sidebar />
-<Favorite/>
-
-</div>
-
+      <AddToOutfitButton productId="647da6d2ff948d77053693f8" />
+      <RemoveToOutfitButton productId="647da6d2ff948d77053693f8" />
+      <SearchBar />
+      <FetchAllProductsButton />
+      <Sidebar />
+      <Favorite />
+    </div>
   );
 }
 
-export function Favorite() {
+export function Favorite(props) {
   const [isFavorite, setIsFavorite] = useState(false);
 
   const handleClick = async () => {
     try {
       console.log("FETCHING");
-      const response = await fetch("/api/favorite/647da6d2ff948d77053693f8", {
+      const response = await fetch(`/api/favorite/${props.id}`, {
         method: "POST",
       });
       if (response.ok) {
@@ -43,16 +39,11 @@ export function Favorite() {
   return (
     <div className="favorite-button-wrapper">
       <button onClick={handleClick} className="favorite-button">
-        {isFavorite ? "Favorited" : "❤️"}
+        {isFavorite ? "Add" : "❤️"}
       </button>
-
-     
     </div>
   );
 }
-
-
-
 
 export function AddToOutfitButton(productId) {
   const [message, setMessage] = useState("");
@@ -70,10 +61,8 @@ export function AddToOutfitButton(productId) {
     } catch (err) {
       console.log(err);
     }
-    
   };
 
-  
   return (
     <div>
       <button onClick={handleClick} className="outFit">
@@ -84,37 +73,33 @@ export function AddToOutfitButton(productId) {
   );
 }
 
-
 export function RemoveToOutfitButton(productId) {
-    const [message, setMessage] = useState("");
-    
-    const handleClick = async () => {
-      try {
-        const response = await fetch(`/api/outfit/${productId.productId}`, {
-          method: "DELETE",
-        });
-        if (response.ok) {
-          const data = await response.json();
-          setMessage(data.message); // Armazena a mensagem do backend no estado
-          console.log(data);
-        }
-      } catch (err) {
-        console.log(err);
-      }
-      
-    };
-  
-    
-    return (
-      <div>
-        <button onClick={handleClick} className="outFit">
-          Remove Outfit
-        </button>
-        {message && <p>{message}</p>}
-      </div>
-    );
-  }
+  const [message, setMessage] = useState("");
 
+  const handleClick = async () => {
+    try {
+      const response = await fetch(`/api/outfit/${productId.productId}`, {
+        method: "DELETE",
+      });
+      if (response.ok) {
+        const data = await response.json();
+        setMessage(data.message); // Armazena a mensagem do backend no estado
+        console.log(data);
+      }
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  return (
+    <div>
+      <button onClick={handleClick} className="outFit">
+        Clear Outfit
+      </button>
+      {message && <p>{message}</p>}
+    </div>
+  );
+}
 
 export const SearchBar = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -133,10 +118,8 @@ export const SearchBar = () => {
       console.log(response.json());
       if (response.ok) {
         const data = await response.json();
-        
-        return data
 
-        
+        return data;
       }
     } catch (err) {
       console.log(err);
@@ -228,19 +211,23 @@ export const Sidebar = () => {
 
     try {
       const response = await fetch(
-        `/api/products/category/${selectedCategory}`, {
-            method: "GET",
-          })
-      ;
+        `/api/products/category/${selectedCategory}`,
+        {
+          method: "GET",
+        }
+      );
       if (response.ok) {
         const data = await response.json();
         console.log("Category:", data.category);
       }
 
       // Endpoint para filtro de cor
-      const colorResponse = await fetch(`/api/products/color/${selectedColor}`, {
-        method: "GET",
-      });
+      const colorResponse = await fetch(
+        `/api/products/color/${selectedColor}`,
+        {
+          method: "GET",
+        }
+      );
       if (colorResponse.ok) {
         const colorData = await colorResponse.json();
         console.log("Color:", colorData.color);
@@ -256,9 +243,11 @@ export const Sidebar = () => {
 
       // Endpoint para filtro de material
       const materialResponse = await fetch(
-        `/api/products/material/${selectedMaterial}`, {
-            method: "GET",
-          });
+        `/api/products/material/${selectedMaterial}`,
+        {
+          method: "GET",
+        }
+      );
       if (materialResponse.ok) {
         const materialData = await materialResponse.json();
         console.log("Material:", materialData.material);
@@ -266,10 +255,11 @@ export const Sidebar = () => {
 
       // Endpoint para filtro de rating(melhores produtos)
       const ratingResponse = await fetch(
-        `/api/products/material/${selectedRating}`, {
-            method: "GET",
-          })
-      ;
+        `/api/products/material/${selectedRating}`,
+        {
+          method: "GET",
+        }
+      );
       if (ratingResponse.ok) {
         const ratingData = await ratingResponse.json();
         console.log("Material:", ratingData.rating);
