@@ -8,8 +8,8 @@ function Footer() {
   return (
 
     <div class="footer">
-      <div class="container1">
-        <div class="row1">
+      
+       
           <div class="footer-col-2">
             <p>
               {" "}
@@ -20,22 +20,17 @@ function Footer() {
               segurança e consciência ambiental!
             </p>
           </div>
-
-          <div class="footer-col-4">
             <h3>Follow us</h3>
             <br />
             <ul className="img">
               <img src={instagramlogo} alt="camisola" height="40" className="img"/>
-
               <img src={facebooklogo} alt="camisola" height="40" className="img" />
-
               <img src={whatsapplogo} alt="camisola" height="40" className="img"/>
             </ul>
-          </div>
-          </div>
+          
         <hr />
         <p class="copyright">Copyright 2023 - ReVestir</p>
-     </div>
+     
     </div>
   )
 }

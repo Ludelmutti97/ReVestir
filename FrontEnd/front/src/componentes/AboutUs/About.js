@@ -20,10 +20,10 @@ function About() {
           <nav>
             <ul id="MenuItems">
               <li>
-                <a href="/">Home</a>
+                  <a href="/" className="linkpp" >Home</a>
               </li>
               <li>
-                <a href="/produtos">Products</a>
+                  <a href="/produtos" className="linkpp">Products</a>
               </li>
               
             </ul>

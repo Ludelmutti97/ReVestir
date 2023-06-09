@@ -274,13 +274,13 @@ function HomePage() {
           <nav>
             <ul id="MenuItems">
               <li>
-                <a href="/produtos">Products</a>
+                <a href="/produtos" className="linkpp">Products</a>
               </li>
               <li>
-                <a href="/About">About</a>
+                <a href="/About" className="linkpp" >About</a>
               </li>
               <li>
-                <a href="/Closet">
+                <a href="/Closet"  >
                   <img className="usericon"
                     src={usericon}
                     alt="usericon"
@@ -315,26 +315,39 @@ function HomePage() {
         <div className="scrolldown">
           <img src={scrolldown} alt="scrolldown" height="75" />
         </div>
+          
         <div className="caixaHomePage" style={{ backgroundColor: "white" }}>
-          <h1 className="Titulos">T-Sthirts</h1>
-          <Carrousel items={tshirtsArray} />
+          <div className="Sthirts">
+            <button >See all</button>
+          </div>
+          <h1 className="Titulos" >Sthirts</h1>
+          <Carrousel  items={tshirtsArray} />
         </div>
-        <div className="caixaHomePage">
+
+        <div className="caixaHomePage" >
+
+          <div className="Camisolas">
+            <button >See all</button>
+          </div>
+
           <h1 className="Titulos">Camisolas</h1>
           <Carrousel items={camisolasArray} />
         </div>
+
+        
+
         <div className="caixaHomePage" style={{ backgroundColor: "white" }}>
-          <h1 className="Titulos" style={{ backgroundColor: "white" }} >Calças</h1>
+
+           <div className="botaoCalcas">
+          <button >See all</button>
+          </div>
+
+
+          <h1 className="Titulos" >Calças</h1>
           <Carrousel items={calcassArray} />
+          
         </div>
 
-        <div className='caixaHomePage'  >
-          <h1 className='Titulos'  >Sapatilhas</h1>
-            </div>
-        <div className='caixaHomePage'>
-          <h1 className='Titulos'>Sapatilhas</h1>
-          <Carrousel items={tshirtsArray} />
-        </div>
         </div>
         <Footer />
 
