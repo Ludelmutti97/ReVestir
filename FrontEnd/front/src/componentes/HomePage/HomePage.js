@@ -79,6 +79,7 @@ const tshirtsArray = [
 const camisolasArray = [
   {
     key: uuidv4(),
+<<<<<<< HEAD
     content: (
       <img
         className="caixaCorrousel"
@@ -137,6 +138,42 @@ const camisolasArray = [
       />
     ),
   },
+=======
+    content: <img className="caixaCorrousel"
+      src="imagens/RoupaDoSite/hoodie1.png"
+      alt="7" />
+  },
+  {
+    key: uuidv4(),
+    content: <img className="caixaCorrousel"
+      src="imagens/RoupaDoSite/hoodie2.png"
+      alt="2" />
+  },
+  {
+    key: uuidv4(),
+    content: <img className="caixaCorrousel"
+      src="imagens/RoupaDoSite/hoodie3.png"
+      alt="3" />
+  },
+  {
+    key: uuidv4(),
+    content: <img className="caixaCorrousel"
+      src="imagens/RoupaDoSite/hoodie4.png"
+      alt="4" />
+  },
+  {
+    key: uuidv4(),
+    content: <img className="caixaCorrousel"
+      src="imagens/RoupaDoSite/hoodie5.png"
+      alt="5" />
+  },
+  {
+    key: uuidv4(),
+    content: <img className="caixaCorrousel"
+      src="imagens/RoupaDoSite/hoodie6.png"
+      alt="6" />
+  }
+>>>>>>> 562aaa2cc2028e1b9d20c9cd434f019cd137d0ac
 ];
 
 const calcassArray = [
@@ -202,6 +239,13 @@ const calcassArray = [
   },
 ];
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> 562aaa2cc2028e1b9d20c9cd434f019cd137d0ac
 function HomePage() {
   const [searchResults, setSearchResults] = useState([]);
 
@@ -232,6 +276,7 @@ function HomePage() {
           {/* Exibir os resultados da busca */}
           {searchResults.length > 0 ? (
             <div className="search-results">
+<<<<<<< HEAD
               <h2>Resultados da busca: {searchResults.length}</h2>
               <ul>
                 {searchResults.map((product, index) => {
@@ -244,6 +289,17 @@ function HomePage() {
                     </li>
                   );
                 })}
+=======
+              <h2>Resultados da busca:</h2>
+              <ul>
+                {searchResults.map((product, index) => (
+                  <li key={index}>
+                    <img src={product.image} alt={product.name} />
+                    <h3>{product.name}</h3>
+                    <p>{product.description}</p>
+                  </li>
+                ))}
+>>>>>>> 562aaa2cc2028e1b9d20c9cd434f019cd137d0ac
               </ul>
             </div>
           ) : (
@@ -252,6 +308,10 @@ function HomePage() {
 
           <nav>
             <ul id="MenuItems">
+<<<<<<< HEAD
+=======
+
+>>>>>>> 562aaa2cc2028e1b9d20c9cd434f019cd137d0ac
               <li>
                 <a href="/produtos">Products</a>
               </li>
@@ -260,13 +320,24 @@ function HomePage() {
               </li>
               <li>
                 <a href="/Closet">
+<<<<<<< HEAD
                   <img className="usericon" src={usericon} alt="usericon" />
+=======
+                  <img className="usericon"
+                    src={usericon}
+                    alt="usericon"
+                  />
+>>>>>>> 562aaa2cc2028e1b9d20c9cd434f019cd137d0ac
                 </a>
               </li>
             </ul>
           </nav>
 
+<<<<<<< HEAD
           {/*<Link to="/produtos">
+=======
+          {  /*<Link to="/produtos">
+>>>>>>> 562aaa2cc2028e1b9d20c9cd434f019cd137d0ac
             <p className="prods">Produtos</p>
           </Link>
           <Link to="/closet">
@@ -303,6 +374,7 @@ function HomePage() {
           <h1 className="Titulos">Calças</h1>
           <Carrousel items={calcassArray} />
         </div>
+<<<<<<< HEAD
         <div className="caixaHomePage">
           <h1 className="Titulos">Vestidos</h1>
           <Carrousel items={tshirtsArray} />
@@ -312,6 +384,14 @@ function HomePage() {
           <Carrousel items={tshirtsArray} />
         </div>
         <Footer />
+=======
+        <div className='caixaHomePage'>
+          <h1 className='Titulos'>Sapatilhas</h1>
+          <Carrousel items={tshirtsArray} />
+        </div>
+        <Footer />
+
+>>>>>>> 562aaa2cc2028e1b9d20c9cd434f019cd137d0ac
       </div>
     </div>
   );
