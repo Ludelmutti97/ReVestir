@@ -10,7 +10,7 @@ import hoodie from "../imagens/hoodie.png";
 import { v4 as uuidv4 } from "uuid";
 import SearchBar from "../barradePesquisa/barraDePesquisa";
 import Carrousel from "../Carrousel/CarroselHome";
-
+import { Link } from "react-router-dom";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
@@ -327,10 +327,10 @@ function HomePage() {
           <nav>
             <ul id="MenuItems">
               <li>
-                <a href="/produtos">Products</a>
+                <a href="/produtos" className="linkpp">Products</a>
               </li>
               <li>
-                <a href="/About">About</a>
+                <a href="/About" className="linkpp" >About</a>
               </li>
               <li>
                 <a href="/Closet">
@@ -354,31 +354,50 @@ function HomePage() {
         <div className="scrolldown">
           <img src={scrolldown} alt="scrolldown" height="75" />
         </div>
+          
         <div className="caixaHomePage" style={{ backgroundColor: "white" }}>
-          <h1 className="Titulos">T-Sthirts</h1>
-          <Carrousel items={tshirtsArray} />
+          <div className="Sthirts">
+            <Link to="/produtos">
+              <button >See all</button>
+            </Link>
+          </div>
+          <h1 className="Titulos" >Sthirts</h1>
+          <Carrousel  items={tshirtsArray} />
         </div>
-        <div className="caixaHomePage">
+
+        <div className="caixaHomePage" >
+
+          <div className="Camisolas">
+            <Link to="/produtos">
+              <button >See all</button>
+            </Link>
+          </div>
+
           <h1 className="Titulos">Camisolas</h1>
           <Carrousel items={camisolasArray} />
         </div>
+
+        
+
         <div className="caixaHomePage" style={{ backgroundColor: "white" }}>
-          <h1 className="Titulos" style={{ backgroundColor: "white" }}>
-            Calças
-          </h1>
+
+           <div className="botaoCalcas">
+            <Link to="/produtos">
+          <button >See all</button>
+          </Link>
+          </div>
+
+
+          <h1 className="Titulos" >Calças</h1>
           <Carrousel items={calcassArray} />
+          
         </div>
 
-        <div className="caixaHomePage">
-          <h1 className="Titulos">Sapatilhas</h1>
         </div>
-        <div className="caixaHomePage">
-          <h1 className="Titulos">Sapatilhas</h1>
-          <Carrousel items={tshirtsArray} />
-        </div>
-      </div>
+        <Footer />
 
-      <Footer />
+
+      
     </div>
   );
 }
