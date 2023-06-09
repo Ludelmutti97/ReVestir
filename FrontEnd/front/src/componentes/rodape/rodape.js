@@ -3,6 +3,7 @@ import "./Rodape.css";
 import instagramlogo from "../imagens/instagramlogo.png";
 import facebooklogo from "../imagens/facebooklogo.png";
 import whatsapplogo from "../imagens/whatsapplogo.png";
+import recyclelogo from "../imagens/recyclelogo.png";
 
 function Footer() {
   return (
@@ -24,7 +25,7 @@ function Footer() {
           <div class="footer-col-4">
             <h3>Follow us</h3>
             <br />
-            <ul className="img">
+            <ul className="">
               <img src={instagramlogo} alt="camisola" height="40" className="img" />
 
               <img src={facebooklogo} alt="camisola" height="40" className="img" />
