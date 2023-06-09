@@ -58,12 +58,8 @@ async function findfavoriteById(pid, uid) {
 
 // TODOS OS FAVORITOS
 async function findFavoriteAll() {
-  const collection = await getMongoCollection(collectionName);
-  const produtoFavorito = await collection
-    .find({
-      favorite: true,
-    })
-    .toArray();
+  const collection = await getMongoCollection(collectionFavorites);
+  const produtoFavorito = await collection.find().toArray();
 
   return produtoFavorito;
 }

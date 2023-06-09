@@ -98,7 +98,6 @@ app.get("/api/products/:id", async (req, res) => {
   }
 });
 
-
 // @desc    get  Categoria tipo ( ex:sapato)
 // @route   get api/products/category/:categoria
 
@@ -167,10 +166,18 @@ app.get("/api/products/rating/:rating", async (req, res) => {
 
 app.get("/api/favorite", async (req, res) => {
   try {
-    const product = await getFavorite();
+    const productIds = await getFavorite();
+    const productPromises = productIds.map(async (productId) => {
+      const p = await getProdutoId(productId.pid);
+      return p;
+    });
+
+    const products = await Promise.all(productPromises);
+
+    console.log(products);
     // Check if product exists
-    if (product) {
-      return res.json(product);
+    if (products) {
+      return res.json(products);
     } else {
       return res.status(404).json({ message: "not_found" });
     }
