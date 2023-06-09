@@ -13,7 +13,7 @@ function SingleProduct() {
 
     async function fetchSingle() {
       console.log("Single...");
-      const res = await fetch(`/api/products/${/id}}`, options);
+      const res = await fetch(`/api/products/id`, options);
       if (res.status === 200) {
         console.log("Product");
         const body = await res.json();
