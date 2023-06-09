@@ -7,13 +7,13 @@ import whatsapplogo from "../imagens/whatsapplogo.png";
 function Footer() {
   return (
 
-    <div class="footer">
-      <div class="container">
+    <div class="footer_rodape">
+      <div class="container_rodape">
         <div class="row">
           <div class="footer-col-2">
             <p>
               {" "}
-              ReVestir  dedicada à moda sustentável, onde você
+              ReVestir é um repositório de roupa dedicado à moda sustentável, onde você
               encontrará dicas de estilo consciente, marcas ecológicas e
               iniciativas inovadoras. Junte-se a nós nessa jornada rumo a um
               futuro fashion mais responsável e ético. Seja uma referência de
@@ -23,7 +23,7 @@ function Footer() {
 
           <div class="footer-col-4">
             <h3>Follow us</h3>
-            <br />
+            <br/>
             <ul className="img">
               <img src={instagramlogo} alt="camisola" height="40" className="img"/>
 
